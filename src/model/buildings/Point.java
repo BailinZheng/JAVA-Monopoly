@@ -4,6 +4,7 @@ import model.PlayerModel;
 import model.TextTipModel;
 import context.GameState;
 import control.Control;
+import language.UI_Language;
 
 /**
  * 
@@ -20,7 +21,7 @@ public class Point extends Building {
 
 	public Point(int posX, int posY, int point) {
 		super(posX, posY);
-		this.name = point + "µã¾íÎ»";
+		this.name = point + UI_Language.getLanguage().getPOINT_EVENT_1();
 		this.point = point;
 	}
 

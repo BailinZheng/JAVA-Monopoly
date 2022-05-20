@@ -8,6 +8,7 @@ import model.EventsModel;
 import model.PlayerModel;
 import context.GameState;
 import control.Control;
+import language.UI_Language;
 
 /**
  * 
@@ -48,7 +49,7 @@ public class Park extends Building {
 
 	public Park(int posX, int posY) {
 		super(posX, posY);
-		this.name = "¹«Ô°";
+		this.name = UI_Language.getLanguage().getPARK_EVENT_1();;
 	}
 	
 	public Image[] getImgageEvents() {

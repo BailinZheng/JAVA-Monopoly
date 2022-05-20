@@ -10,7 +10,7 @@ import model.PlayerModel;
 
 import context.GameState;
 import control.Control;
-
+import language.UI_Language;
 import util.FileUtil;
 import util.MyThread;
 
@@ -24,7 +24,7 @@ import util.MyThread;
 public class House extends Building {
 
 	private int upPrice;
-	private String[] nameString = { "空地", "平房", "店铺", "商场", "商业大楼", "摩天大楼" };
+	private String[] nameString = {  UI_Language.getLanguage().getHOUSE_EVENT_1(), UI_Language.getLanguage().getHOUSE_EVENT_2(), UI_Language.getLanguage().getHOUSE_EVENT_3(), UI_Language.getLanguage().getHOUSE_EVENT_4(), UI_Language.getLanguage().getHOUSE_EVENT_5(),  UI_Language.getLanguage().getHOUSE_EVENT_6(), };
 
 	private PlayerModel player;
 

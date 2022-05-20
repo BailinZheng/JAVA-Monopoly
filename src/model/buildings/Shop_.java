@@ -9,8 +9,7 @@ import javax.swing.JOptionPane;
 
 import context.GameState;
 import control.GameRunning;
-
-
+import language.UI_Language;
 import model.buildings.Building;
 import model.card.*;
 
@@ -45,7 +44,7 @@ public class Shop_ extends Building {
 
 	public Shop_(int posX, int posY) {
 		super(posX, posY);
-		this.name = "ил╣Й";
+		this.name = UI_Language.getLanguage().getSHOP_EVENT_1();
 	}
 
 	@Override

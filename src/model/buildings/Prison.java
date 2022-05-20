@@ -8,6 +8,9 @@ import model.TextTipModel;
 
 import context.GameState;
 import control.Control;
+import language.AllLanguages;
+import language.German;
+import language.UI_Language;
 
 /**
  * 
@@ -19,13 +22,13 @@ import control.Control;
  */
 public class Prison extends Building {
 
-	private String[] events = { "去监狱看望好友，", "被冤枉入狱，", "被监狱管理员抓去打扫卫生，" };
+	private String[] events = { UI_Language.getLanguage().getPRISON_EVENT_1(), UI_Language.getLanguage().getPRISON_EVENT_2(), UI_Language.getLanguage().getPRISON_EVENT_3(),  };
 
 	private PlayerModel player;
 
 	public Prison(int posX, int posY) {
 		super(posX, posY);
-		this.name = "监狱";
+		this.name = UI_Language.getLanguage().getPRISON_EVENT_4() ;
 	}
 
 	public String[] getEvents() {

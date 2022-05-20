@@ -3,7 +3,7 @@ package model.card;
 import javax.swing.JOptionPane;
 
 import context.GameState;
-
+import language.UI_Language;
 import model.PlayerModel;
 import model.buildings.Building;
 
@@ -18,7 +18,7 @@ public class ChangeCard extends Card {
 	public ChangeCard(PlayerModel owner) {
 		super(owner);
 		this.name = "ChangeCard";
-		this.cName = "»»ÎÝ¿¨";
+		this.cName = UI_Language.getLanguage().getCC_EVENT_1();
 		this.price = 70;
 	}
 

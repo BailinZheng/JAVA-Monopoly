@@ -3,7 +3,7 @@ package model.card;
 import javax.swing.JOptionPane;
 
 import context.GameState;
-
+import language.UI_Language;
 import model.PlayerModel;
 import model.buildings.Building;
 
@@ -18,7 +18,7 @@ public class AddLevelCard extends Card {
 	public AddLevelCard(PlayerModel owner) {
 		super(owner);
 		this.name = "AddLevelCard";
-		this.cName = "¼Ó¸Ç¿¨";
+		this.cName = UI_Language.getLanguage().getADDLC_EVENT_1();
 		this.price = 30;
 
 	}

@@ -3,6 +3,7 @@ package model.buildings;
 import model.PlayerModel;
 import context.GameState;
 import control.Control;
+import language.UI_Language;
 
 /**
  * 
@@ -26,7 +27,7 @@ public class Origin extends Building {
 
 	public Origin(int posX, int posY) {
 		super(posX, posY);
-		this.name = "Æðµã";
+		this.name = UI_Language.getLanguage().getORIGIN_EVENT_1();
 		this.reward = 500;
 		this.passReward = 200;
 	}

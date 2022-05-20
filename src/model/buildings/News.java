@@ -12,7 +12,7 @@ import model.TextTipModel;
 
 import context.GameState;
 import control.Control;
-
+import language.UI_Language;
 import util.FileUtil;
 
 /**
@@ -133,7 +133,7 @@ public class News extends Building {
 
 	public News(int posX, int posY) {
 		super(posX, posY);
-		this.name = "пбне";
+		this.name = UI_Language.getLanguage().getNEWS_EVENT_1();
 	}
 
 	public Image[] getImgageEvents() {

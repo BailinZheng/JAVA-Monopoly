@@ -4,6 +4,7 @@ import model.PlayerModel;
 import model.TextTipModel;
 import context.GameState;
 import control.Control;
+import language.UI_Language;
 
 /**
  * 
@@ -21,7 +22,7 @@ public class Lottery extends Building {
 	
 	public Lottery(int posX, int posY) {
 		super(posX, posY);
-		this.name = "¿÷Õ∏";
+		this.name = UI_Language.getLanguage().getLOTTERY_EVENT_1();
 	}
 	
 	@Override
