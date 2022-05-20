@@ -3,7 +3,7 @@ package model.card;
 import javax.swing.JOptionPane;
 
 import context.GameState;
-
+import language.UI_Language;
 import model.PlayerModel;
 
 /**
@@ -17,7 +17,7 @@ public class TallageCard extends Card{
 	public TallageCard(PlayerModel owner) {
 		super(owner);
 		this.name = "TallageCard";
-		this.cName = "²éË°¿¨";
+		this.cName = UI_Language.getLanguage().getTC_EVENT_1();
 		this.price = 100;
 	}
 

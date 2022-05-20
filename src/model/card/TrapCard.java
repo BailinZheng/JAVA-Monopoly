@@ -3,7 +3,7 @@ package model.card;
 import javax.swing.JOptionPane;
 
 import context.GameState;
-
+import language.UI_Language;
 import model.LandModel;
 import model.PlayerModel;
 
@@ -17,7 +17,7 @@ public class TrapCard extends Card {
 	public TrapCard(PlayerModel owner) {
 		super(owner);
 		this.name = "TrapCard";
-		this.cName = "ÏÝº¦¿¨";
+		this.cName = UI_Language.getLanguage().getTCCC_EVENT_1();
 		this.price = 120;
 	}
 

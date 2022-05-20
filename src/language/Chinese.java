@@ -25,7 +25,14 @@ public final class Chinese extends AllLanguages {
 	public static String ADDLC_EVENT_1 = "增加等级卡";
 	public static String EAC_EVENT_1 = "平均卡 ";
 	public static String CC_EVENT_1 = "换屋卡";
-	
-	
+	public static String DD_EVENT_1 = "控制骰子卡";
+	public static String CCD_EVENT_1 = "穿越卡";
+	public static String HC_EVENT_1 = "购地卡";
+	public static String RDL_EVENT_1 = "重置等级卡";
+	public static String RC_EVENT_1 = "打劫卡";
+	public static String SC_EVENT_1 = "停止卡";
+	public static String TC_EVENT_1 = "塔里格卡";
+	public static String TCC_EVENT_1 = "乌龟卡";
+	public static String TCCC_EVENT_1 = "陷阱卡";
 	}
 

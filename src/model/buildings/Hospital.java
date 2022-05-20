@@ -16,7 +16,7 @@ import language.UI_Language;
  * 
  */
 public class Hospital extends Building {
-	
+
 	private String[] events = {
 			UI_Language.getLanguage().getHOSPITAL_EVENT_1(),
 			UI_Language.getLanguage().getHOSPITAL_EVENT_2(),

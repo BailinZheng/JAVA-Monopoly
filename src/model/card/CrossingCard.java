@@ -1,6 +1,7 @@
 package model.card;
 
 import context.GameState;
+import language.UI_Language;
 import model.PlayerModel;
 
 /**
@@ -15,7 +16,7 @@ public class CrossingCard extends Card{
 	public CrossingCard(PlayerModel owner) {
 		super(owner);
 		this.name = "CrossingCard";
-		this.cName = "¼Þ»ö¿¨";
+		this.cName = UI_Language.getLanguage().getCCD_EVENT_1();
 		this.price = 120;
 	}
 

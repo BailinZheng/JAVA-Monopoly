@@ -3,7 +3,7 @@ package model.card;
 import javax.swing.JOptionPane;
 
 import context.GameState;
-
+import language.UI_Language;
 import model.PlayerModel;
 
 /**
@@ -19,8 +19,8 @@ public class ControlDiceCard extends Card{
 	
 	public ControlDiceCard(PlayerModel owner) {
 		super(owner);
-		this.name = "ControlDiceCard";
-		this.cName = "Ò£¿Ø÷»×Ó¿¨";
+		this.name = "Controldicecard";
+		this.cName = UI_Language.getLanguage().getDD_EVENT_1();
 		this.price = 30;
 	}
 

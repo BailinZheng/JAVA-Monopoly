@@ -291,5 +291,103 @@ public class AllLanguages {
 			return "";
 		}
 	}
+	public String getDD_EVENT_1() {
+		switch (international_code) {
+		case 0:
+			return German.DD_EVENT_1;
+		case 1:
+			return Chinese.DD_EVENT_1;
 
+		default:
+			return "";
+		}
+	}
+	public String getCCD_EVENT_1() {
+		switch (international_code) {
+		case 0:
+			return German.CCD_EVENT_1;
+		case 1:
+			return Chinese.CCD_EVENT_1;
+
+		default:
+			return "";
+		}
+	}
+	public String getHC_EVENT_1() {
+		switch (international_code) {
+		case 0:
+			return German.HC_EVENT_1;
+		case 1:
+			return Chinese.HC_EVENT_1;
+
+		default:
+			return "";
+		}
+	}
+	public String getRDL_EVENT_1() {
+		switch (international_code) {
+		case 0:
+			return German.RDL_EVENT_1;
+		case 1:
+			return Chinese.RDL_EVENT_1;
+
+		default:
+			return "";
+		}
+	}
+	public String getRC_EVENT_1() {
+		switch (international_code) {
+		case 0:
+			return German.RC_EVENT_1;
+		case 1:
+			return Chinese.RC_EVENT_1;
+
+		default:
+			return "";
+		}
+	}
+	public String getSC_EVENT_1() {
+		switch (international_code) {
+		case 0:
+			return German.SC_EVENT_1;
+		case 1:
+			return Chinese.SC_EVENT_1;
+
+		default:
+			return "";
+		}
+	}
+	public String getTC_EVENT_1() {
+		switch (international_code) {
+		case 0:
+			return German.TC_EVENT_1;
+		case 1:
+			return Chinese.TC_EVENT_1;
+
+		default:
+			return "";
+		}
+	}
+	public String getTCC_EVENT_1() {
+		switch (international_code) {
+		case 0:
+			return German.TCC_EVENT_1;
+		case 1:
+			return Chinese.TCC_EVENT_1;
+
+		default:
+			return "";
+		}
+	}
+	public String getTCCC_EVENT_1() {
+		switch (international_code) {
+		case 0:
+			return German.TCCC_EVENT_1;
+		case 1:
+			return Chinese.TCCC_EVENT_1;
+
+		default:
+			return "";
+		}
+	}
 }

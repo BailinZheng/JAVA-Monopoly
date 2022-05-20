@@ -3,7 +3,7 @@ package model.card;
 import javax.swing.JOptionPane;
 
 import context.GameState;
-
+import language.UI_Language;
 import model.PlayerModel;
 import model.buildings.Building;
 
@@ -18,7 +18,7 @@ public class ReduceLevelCard extends Card{
 	public ReduceLevelCard(PlayerModel owner) {
 		super(owner);
 		this.name = "ReduceLevelCard";
-		this.cName = "½µ¼¶¿¨";
+		this.cName = UI_Language.getLanguage().getRDL_EVENT_1();
 		this.price = 30;
 	}
 

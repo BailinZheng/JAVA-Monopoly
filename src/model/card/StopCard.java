@@ -3,7 +3,7 @@ package model.card;
 import javax.swing.JOptionPane;
 
 import context.GameState;
-
+import language.UI_Language;
 import model.PlayerModel;
 
 /**
@@ -21,7 +21,7 @@ public class StopCard extends Card{
 	public StopCard(PlayerModel owner) {
 		super(owner);
 		this.name = "StopCard";
-		this.cName ="Í£Áô¿¨";
+		this.cName =UI_Language.getLanguage().getSC_EVENT_1();
 		this.price = 50;
 	}
 

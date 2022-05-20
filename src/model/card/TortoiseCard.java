@@ -3,7 +3,7 @@ package model.card;
 import javax.swing.JOptionPane;
 
 import context.GameState;
-
+import language.UI_Language;
 import model.PlayerModel;
 
 /**
@@ -20,7 +20,7 @@ public class TortoiseCard extends Card {
 	public TortoiseCard(PlayerModel owner) {
 		super(owner);
 		this.name = "TortoiseCard";
-		this.cName = "�ڹ꿨";
+		this.cName = UI_Language.getLanguage().getTCC_EVENT_1();
 		this.price = 50;
 	}
 
