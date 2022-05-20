@@ -14,7 +14,7 @@ public class Main {
 		try {
 			UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
 		} catch (Exception e1) {
-			
+			System.out.println(e1.toString());
 		}
 	}
 
