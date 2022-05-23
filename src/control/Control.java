@@ -34,6 +34,7 @@ import ui.JPanelGame;
 import util.FileUtil;
 import util.MyThread;
 import context.GameState;
+import language.UI_Language;
 
 /**
  * 
@@ -244,9 +245,9 @@ public class Control {
 		if (player.getInHospital() > 0 || player.getInPrison() > 0) {
 			this.run.nextState();
 			if (player.getInHospital() > 0) {
-				this.textTip.showTextTip(player, player.getName() + "住院中.", 3);
+				this.textTip.showTextTip(player, player.getName() + 	UI_Language.getLanguage().getCON_EVENT_1(), 3);
 			} else if (player.getInPrison() > 0) {
-				this.textTip.showTextTip(player, player.getName() + "在监狱.", 3);
+				this.textTip.showTextTip(player, player.getName() + UI_Language.getLanguage().getCON_EVENT_2(),3);
 			}
 			this.run.nextState();
 		} else {
@@ -331,8 +332,8 @@ public class Control {
 	 * 
 	 */
 	private void passOrigin(Building b, PlayerModel player) {
-		this.textTip.showTextTip(player, player.getName() + " 路过原点，奖励 "
-				+ ((Origin) b).getPassReward() + "金币.", 3);
+		this.textTip.showTextTip(player, player.getName() + UI_Language.getLanguage().getCON_EVENT_3()
+				+ ((Origin) b).getPassReward() + UI_Language.getLanguage().getCON_EVENT_4(), 3);
 		player.setCash(player.getCash() + ((Origin) b).getPassReward());
 	}
 
@@ -459,12 +460,12 @@ public class Control {
 		// 当前玩家
 		PlayerModel player = this.run.getNowPlayer();
 		if (player.getInHospital() > 0) {
-			this.textTip.showTextTip(player, player.getName() + "当前在医院,不能移动.",
+			this.textTip.showTextTip(player, player.getName() + UI_Language.getLanguage().getCON_EVENT_5(),
 					2);
 			// 更换玩家状态
 			this.run.nextState();
 		} else if (player.getInPrison() > 0) {
-			this.textTip.showTextTip(player, player.getName() + "当前在监狱,不能移动.",
+			this.textTip.showTextTip(player, player.getName() + UI_Language.getLanguage().getCON_EVENT_6(),
 					2);
 			// 更换玩家状态
 			this.run.nextState();
@@ -569,7 +570,7 @@ public class Control {
 		player.setInPrison(days);
 		int random = (int) (Math.random() * ((Prison) b).getEvents().length);
 		String text = ((Prison) b).getEvents()[random];
-		this.textTip.showTextTip(player, player.getName() + text + "停留"
+		this.textTip.showTextTip(player, player.getName() + text + UI_Language.getLanguage().getCON_EVENT_7()
 				+ (days - 1) + "天.", 3);
 		new Thread(new MyThread(run, 1)).start();
 	}
@@ -581,8 +582,8 @@ public class Control {
 	 */
 	private void stopInPoint(Building b, PlayerModel player) {
 		player.setNx(((Point) b).getPoint() + player.getNx());
-		this.textTip.showTextTip(player, player.getName() + " 获得 "
-				+ ((Point) b).getPoint() + "点卷.", 3);
+		this.textTip.showTextTip(player, player.getName() + UI_Language.getLanguage().getCON_EVENT_8()
+				+ ((Point) b).getPoint() + UI_Language.getLanguage().getCON_EVENT_9(), 3);
 		new Thread(new MyThread(run, 1)).start();
 	}
 
@@ -621,8 +622,8 @@ public class Control {
 	 * 
 	 */
 	private void stopInOrigin(Building b, PlayerModel player) {
-		this.textTip.showTextTip(player, player.getName() + " 在起点停留，奖励 "
-				+ ((Origin) b).getReward() + "金币.", 3);
+		this.textTip.showTextTip(player, player.getName() + UI_Language.getLanguage().getCON_EVENT_10()
+				+ ((Origin) b).getReward() + UI_Language.getLanguage().getCON_EVENT_4(), 3);
 		player.setCash(player.getCash() + ((Origin) b).getReward());
 		new Thread(new MyThread(run, 1)).start();
 	}
@@ -695,7 +696,7 @@ public class Control {
 					player.getCards().remove(i);
 					// 对手减少金钱.
 					player.getOtherPlayer().setCash(player.getOtherPlayer().getCash() - 3000);
-					this.textTip.showTextTip(player, player.getName() + "将一笔\"3000元\"嫁祸给 "+ player.getOtherPlayer().getName()+"。真是人算不如天算啊.", 6);
+					this.textTip.showTextTip(player, player.getName() + UI_Language.getLanguage().getCON_EVENT_11()+ player.getOtherPlayer().getName()+"。.", 6);
 					this.events.showImg(((News) b).get3000(), 3, new Point(
 							420, 160, 0));
 					new Thread(new MyThread(run, 3)).start();
@@ -755,11 +756,11 @@ public class Control {
 		if (b.getOwner().getInHospital() > 0) {
 			// 增加文本提示
 			this.textTip.showTextTip(player, b.getOwner().getName()
-					+ "正在住院,免交过路费.", 3);
+					+ UI_Language.getLanguage().getCON_EVENT_12(), 3);
 		} else if (b.getOwner().getInPrison() > 0) {
 			// 增加文本提示
 			this.textTip.showTextTip(player, b.getOwner().getName()
-					+ "正在监狱,免交过路费.", 3);
+					+ UI_Language.getLanguage().getCON_EVENT_13(), 3);
 		} else {
 			int revenue = b.getRevenue();
 			// 该玩家减少金币
@@ -767,8 +768,8 @@ public class Control {
 			// 业主得到金币
 			b.getOwner().setCash(b.getOwner().getCash() + revenue);
 			// 增加文本提示
-			this.textTip.showTextTip(player, player.getName() + "经过"
-					+ b.getOwner().getName() + "的地盘，过路费:" + revenue + "金币.", 3);
+			this.textTip.showTextTip(player, player.getName() + UI_Language.getLanguage().getCON_EVENT_14()
+					+ b.getOwner().getName() + UI_Language.getLanguage().getCON_EVENT_15() + revenue + UI_Language.getLanguage().getCON_EVENT_4(), 3);
 
 		}
 		new Thread(new MyThread(run, 1)).start();
@@ -786,21 +787,21 @@ public class Control {
 			String name = b.getName();
 			String upName = b.getUpName();
 			int choose = JOptionPane.showConfirmDialog(null,
-					"亲爱的:" + player.getName() + "\r\n" + "是否升级这块地？\r\n" + name
-							+ "→" + upName + "\r\n" + "价格：" + price + " 金币.");
+					"Liebe:" + player.getName() + "\r\n" + UI_Language.getLanguage().getCON_EVENT_17() + name
+							+ "→" + upName + "\r\n" + UI_Language.getLanguage().getCON_EVENT_18() + price + UI_Language.getLanguage().getCON_EVENT_4());
 			if (choose == JOptionPane.OK_OPTION) {
 				if (player.getCash() >= price) {
 					b.setLevel(b.getLevel() + 1);
 					// 减少需要的金币
 					player.setCash(player.getCash() - price);
 					// 增加文本提示
-					this.textTip.showTextTip(player, player.getName() + " 从 "
-							+ name + " 升级成 " + upName + ".花费了 " + price
-							+ "金币. ", 3);
+					this.textTip.showTextTip(player, player.getName() + " von "
+							+ name + UI_Language.getLanguage().getCON_EVENT_19() + upName + UI_Language.getLanguage().getCON_EVENT_20() + price
+							+ UI_Language.getLanguage().getCON_EVENT_4(), 3);
 				} else {
 					// 增加文本提示
 					this.textTip.showTextTip(player, player.getName()
-							+ " 金币不足,操作失败. ", 3);
+							+ UI_Language.getLanguage().getCON_EVENT_21(), 3);
 				}
 			}
 		}

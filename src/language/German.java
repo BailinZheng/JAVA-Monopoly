@@ -35,5 +35,26 @@ public final class German extends AllLanguages {
 	public static String TC_EVENT_1 = "TallageCard";
 	public static String TCC_EVENT_1 = "TortoiseCard";
 	public static String TCCC_EVENT_1 = "TrapCard";
+	public static String CON_EVENT_1 = "im Krankenhaus";
+	public static String CON_EVENT_2 = "im Gefängnis";
+	public static String CON_EVENT_3 = "Gehen Sie am Startpunkt vorbei, Belohnung";
+	public static String CON_EVENT_4 = "Gold";
+	public static String CON_EVENT_5 = "Derzeit im Krankenhaus, kann sich nicht bewegen";
+	public static String CON_EVENT_6 = "Derzeit im Gefängnis, kann sich nicht bewegen";
+	public static String CON_EVENT_7 = "Stop";
+	public static String CON_EVENT_8 = "Erwerben";
+	public static String CON_EVENT_9 = "Punktrolle";
+	public static String CON_EVENT_10 = "Stopp am Startpunkt, Belohnung";
+	public static String CON_EVENT_11 = "Gib 3000 zu";
+	public static String CON_EVENT_12 = "Im Krankenhaus， gebührenfrei";
+	public static String CON_EVENT_13 = "Im Gefängnis， gebührenfrei";
+	public static String CON_EVENT_14 = "durchgehen";
+	public static String CON_EVENT_15 = "Haus， Maut ";
+	public static String CON_EVENT_16 = "Haus，Liebe";
+	public static String CON_EVENT_17 = "Willst du dieses Land verbessern?";
+	public static String CON_EVENT_18 = "Price";
+	public static String CON_EVENT_19 = "Upgraden auf";
+	public static String CON_EVENT_20 = "kostet";
+	public static String CON_EVENT_21 = "Unzureichende Goldmünzen, Vorgang fehlgeschlagen";
 	}
 

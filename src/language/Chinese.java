@@ -34,5 +34,26 @@ public final class Chinese extends AllLanguages {
 	public static String TC_EVENT_1 = "塔里格卡";
 	public static String TCC_EVENT_1 = "乌龟卡";
 	public static String TCCC_EVENT_1 = "陷阱卡";
+	public static String CON_EVENT_1 = "住院中";
+	public static String CON_EVENT_2 = "在监狱";
+	public static String CON_EVENT_3 = "经过起点，奖励";
+	public static String CON_EVENT_4 = "金币";
+	public static String CON_EVENT_5 = "当前在医院不能移动";
+	public static String CON_EVENT_6 = "当前在监狱不能移动";
+	public static String CON_EVENT_7 ="停留";
+	public static String CON_EVENT_8 = "获得";
+	public static String CON_EVENT_9 = "点卷";
+	public static String CON_EVENT_10 = "在起点停留，奖励";
+	public static String CON_EVENT_11 = "将3000元给";
+	public static String CON_EVENT_12 = "正在住院，免交过路费";
+	public static String CON_EVENT_13 = "正在监狱，免交过路费";
+	public static String CON_EVENT_14 = "经过";
+	public static String CON_EVENT_15 = "的地盘，过路费";
+	public static String CON_EVENT_16 = "的地盘，亲爱的";
+	public static String CON_EVENT_17 = "是否升级这块地";
+	public static String CON_EVENT_18 = "价格";
+	public static String CON_EVENT_19 = "升级成";
+	public static String CON_EVENT_20 = "花费了";
+	public static String CON_EVENT_21 = "金币不足，操作失败";
 	}
 
