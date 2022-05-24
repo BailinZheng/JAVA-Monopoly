@@ -55,5 +55,14 @@ public final class Chinese extends AllLanguages {
 	public static String CON_EVENT_19 = "升级成";
 	public static String CON_EVENT_20 = "花费了";
 	public static String CON_EVENT_21 = "金币不足，操作失败";
+	public static String CON_EVENT_22 = "亲爱的";
+	public static String CON_EVENT_23 = "是否买下这块地";
+	public static String CON_EVENT_24 = "买下这块地花费了";
+	public static String CON_EVENT_25 = "天";
+	public static String CON_EVENT_26 = "受停留卡作用，不能移动";
+	public static String CON_EVENT_27 = "受乌龟卡作用，只能移动一步";
+	public static String CON_EVENT_28 = "跳过，不使用 ";
+	public static String CON_EVENT_29 = "选择需要使用的卡片";
+	public static String CON_EVENT_30 = "卡片使用阶段";
 	}
 

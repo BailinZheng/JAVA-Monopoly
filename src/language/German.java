@@ -56,5 +56,14 @@ public final class German extends AllLanguages {
 	public static String CON_EVENT_19 = "Upgraden auf";
 	public static String CON_EVENT_20 = "kostet";
 	public static String CON_EVENT_21 = "Unzureichende Goldmünzen, Vorgang fehlgeschlagen";
+	public static String CON_EVENT_22 = "Liebe";
+	public static String CON_EVENT_23 = "Willst du diese land kaufen";
+	public static String CON_EVENT_24 = "Nachdem Sie das Land gekauft haben, haben Sie es ausgegeben";
+	public static String CON_EVENT_25 = "Tagen";
+	public static String CON_EVENT_26 = "Betroffen von der Stopcard, kann sich nicht bewegen";
+	public static String CON_EVENT_27 = "Von der Tortoise betroffen, darf man sich nur einen Schritt bewegen";
+	public static String CON_EVENT_28 = "überspringen, nicht verwenden";
+	public static String CON_EVENT_29 = "Wählen Sie die Karte aus, die Sie verwenden möchten";
+	public static String CON_EVENT_30 = "Kartennutzungsphase";
 	}
 

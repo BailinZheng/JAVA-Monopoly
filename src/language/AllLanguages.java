@@ -621,4 +621,213 @@ public class AllLanguages {
 			return "";
 		}
 	}
+	public String getCON_EVENT_22() {
+		switch (international_code) {
+		case 0:
+			return German.CON_EVENT_22;
+		case 1:
+			return Chinese.CON_EVENT_22;
+
+		default:
+			return "";
+		}
+	}
+	public String getCON_EVENT_23() {
+		switch (international_code) {
+		case 0:
+			return German.CON_EVENT_23;
+		case 1:
+			return Chinese.CON_EVENT_23;
+
+		default:
+			return "";
+		}
+	}
+	public String getCON_EVENT_24() {
+		switch (international_code) {
+		case 0:
+			return German.CON_EVENT_24;
+		case 1:
+			return Chinese.CON_EVENT_24;
+
+		default:
+			return "";
+		}
+	}
+	public String getCON_EVENT_25() {
+		switch (international_code) {
+		case 0:
+			return German.CON_EVENT_25;
+		case 1:
+			return Chinese.CON_EVENT_25;
+
+		default:
+			return "";
+		}
+	}
+	public String getCON_EVENT_26() {
+		switch (international_code) {
+		case 0:
+			return German.CON_EVENT_26;
+		case 1:
+			return Chinese.CON_EVENT_26;
+
+		default:
+			return "";
+		}
+	}
+	public String getCON_EVENT_27() {
+		switch (international_code) {
+		case 0:
+			return German.CON_EVENT_27;
+		case 1:
+			return Chinese.CON_EVENT_27;
+
+		default:
+			return "";
+		}
+	}
+	public String getCON_EVENT_28() {
+		switch (international_code) {
+		case 0:
+			return German.CON_EVENT_28;
+		case 1:
+			return Chinese.CON_EVENT_28;
+
+		default:
+			return "";
+		}
+	}
+	public String getCON_EVENT_29() {
+		switch (international_code) {
+		case 0:
+			return German.CON_EVENT_29;
+		case 1:
+			return Chinese.CON_EVENT_29;
+
+		default:
+			return "";
+		}
+	}
+	public String getCON_EVENT_30() {
+	switch (international_code) {
+	case 0:
+		return German.CON_EVENT_30;
+	case 1:
+		return Chinese.CON_EVENT_30;
+
+	default:
+		return "";
+	}
+}
+public String getCON_EVENT_31() {
+	switch (international_code) {
+	case 0:
+		return German.CON_EVENT_31;
+	case 1:
+		return Chinese.CON_EVENT_31;
+
+	default:
+		return "";
+	}
+}
+public String getCON_EVENT_32() {
+	switch (international_code) {
+	case 0:
+		return German.CON_EVENT_32;
+	case 1:
+		return Chinese.CON_EVENT_32;
+
+	default:
+		return "";
+	}
+}
+public String getCON_EVENT_33() {
+	switch (international_code) {
+	case 0:
+		return German.CON_EVENT_33;
+	case 1:
+		return Chinese.CON_EVENT_33;
+
+	default:
+		return "";
+	}
+}
+public String getCON_EVENT_34() {
+	switch (international_code) {
+	case 0:
+		return German.CON_EVENT_34;
+	case 1:
+		return Chinese.CON_EVENT_34;
+
+	default:
+		return "";
+	}
+}
+public String getCON_EVENT_35() {
+	switch (international_code) {
+	case 0:
+		return German.CON_EVENT_35;
+	case 1:
+		return Chinese.CON_EVENT_35;
+
+	default:
+		return "";
+	}
+}
+public String getCON_EVENT_36() {
+	switch (international_code) {
+	case 0:
+		return German.CON_EVENT_36;
+	case 1:
+		return Chinese.CON_EVENT_36;
+
+	default:
+		return "";
+	}
+}
+public String getCON_EVENT_37() {
+	switch (international_code) {
+	case 0:
+		return German.CON_EVENT_37;
+	case 1:
+		return Chinese.CON_EVENT_37;
+
+	default:
+		return "";
+	}
+}
+public String getCON_EVENT_38() {
+	switch (international_code) {
+	case 0:
+		return German.CON_EVENT_38;
+	case 1:
+		return Chinese.CON_EVENT_38;
+
+	default:
+		return "";
+	}
+}
+public String getCON_EVENT_39() {
+	switch (international_code) {
+	case 0:
+		return German.CON_EVENT_39;
+	case 1:
+		return Chinese.CON_EVENT_39;
+
+	default:
+		return "";
+	}
+}
+public String getCON_EVENT_40() {
+	switch (international_code) {
+	case 0:
+		return German.CON_EVENT_40;
+	case 1:
+		return Chinese.CON_EVENT_40;
+
+	default:
+		return "";
+	}
+}
 }
