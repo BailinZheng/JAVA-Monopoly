@@ -1,2 +1,6 @@
 # JAVA-Monopoly
-Dies ist ein Java-Monopol, das zwei Sprachen unterstützt: Chinesisch und Deutsch. Dieses Projekt wird weiter aktualisiert, bis ich sterbe.
+Dies ist ein Spiel der MONOPOLY, das auf der JAVA SWING-Technologie basiert. Es ist meine Selbstpraxis im Prozess des Java-Lernens.
+
+
+
+Mehr über mich: www.bailinzheng.de
