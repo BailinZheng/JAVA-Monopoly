@@ -11,6 +11,7 @@ import ui.massage.MassageOk;
 import ui.massage.MassageSimple;
 import ui.massage.MassageYesNo;
 import control.Control;
+import language.UI_Language;
 
 @SuppressWarnings("serial")
 public class JPanelGame extends JPanel{
@@ -106,7 +107,7 @@ public class JPanelGame extends JPanel{
 		// 玩家信息面板显示
 		this.playerInfo = new PlayerInfo(control.getPlayers(),this);
 		// 对话UI
-		this.massageYesNo = new MassageYesNo("选择框", "创建一个对话框", this);
+		this.massageYesNo = new MassageYesNo(UI_Language.getLanguage().getJPG_EVENT_1(), "创建一个对话框", this);
 		// 对话UI
 		this.massageOk = new MassageOk("确定框", "创建一个对话框", this);
 		// 对话UI

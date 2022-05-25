@@ -830,4 +830,48 @@ public String getCON_EVENT_40() {
 		return "";
 	}
 }
+public String getJPG_EVENT_10() {
+	switch (international_code) {
+	case 0:
+		return German.JPG_EVENT_10;
+	case 1:
+		return Chinese.JPG_EVENT_10;
+
+	default:
+		return "";
+	}
+}
+public String getJPG_EVENT_20() {
+	switch (international_code) {
+	case 0:
+		return German.JPG_EVENT_20;
+	case 1:
+		return Chinese.JPG_EVENT_20;
+
+	default:
+		return "";
+	}
+}
+public String getJPG_EVENT_30() {
+	switch (international_code) {
+	case 0:
+		return German.JPG_EVENT_30;
+	case 1:
+		return Chinese.JPG_EVENT_30;
+
+	default:
+		return "";
+	}
+}
+public String getJPG_EVENT_40() {
+	switch (international_code) {
+	case 0:
+		return German.JPG_EVENT_40;
+	case 1:
+		return Chinese.JPG_EVENT_40;
+
+	default:
+		return "";
+	}
+}
 }
