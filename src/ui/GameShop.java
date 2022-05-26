@@ -47,7 +47,7 @@ public class GameShop implements MouseListener, MouseMotionListener {
 		JLabel label = new JLabel("测试");
 		panel.add(label);
 
-		frame.add(new Background(0, 0, 0, 0, null,null));
+		frame.add(new Hintergrund(0, 0, 0, 0, null,null));
 		frame.setSize(300, 300);
 		// 设置窗口中央。
 		frame.setLocation(

@@ -65,6 +65,11 @@ public final class Chinese extends AllLanguages {
 	public static String CON_EVENT_29 = "选择需要使用的卡片";
 	public static String CON_EVENT_30 = "卡片使用阶段";
 	public static String CON_EVENT_31 = "重新选择";
+	public static String CON_EVENT_32 = "嫁祸卡在大事件发生时会自动使用";
+	public static String CON_EVENT_33 = "卡片使用阶段";
+	public static String CON_EVENT_34 = "确认使用";
+	public static String CON_EVENT_35 = "陷害卡";
+	public static String CON_EVENT_36 = "将 ";
 	public static String JPG_EVENT_1 = "选择框";
 	public static String JPG_EVENT_2 = "创建一个对话框";
 	public static String JPG_EVENT_3 = "确定框";

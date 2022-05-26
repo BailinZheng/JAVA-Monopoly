@@ -15,7 +15,7 @@ import model.BackgroundModel;
  * @author MOVELIGHTS
  * 
  */
-public class Background extends Layer {
+public class Hintergrund extends Layer {
 
 	/**
 	 * ±³¾°Í¼Æ¬
@@ -29,7 +29,7 @@ public class Background extends Layer {
 	private BackgroundModel background = null;
 	private JPanelGame panel;
 
-	protected Background(int x, int y, int w, int h,
+	protected Hintergrund(int x, int y, int w, int h,
 			BackgroundModel background,JPanelGame panel) {
 		super(x, y, w, h);
 		this.background = background;

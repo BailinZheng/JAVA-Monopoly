@@ -786,56 +786,12 @@ public String getCON_EVENT_36() {
 		return "";
 	}
 }
-public String getCON_EVENT_37() {
-	switch (international_code) {
-	case 0:
-		return German.CON_EVENT_37;
-	case 1:
-		return Chinese.CON_EVENT_37;
-
-	default:
-		return "";
-	}
-}
-public String getCON_EVENT_38() {
-	switch (international_code) {
-	case 0:
-		return German.CON_EVENT_38;
-	case 1:
-		return Chinese.CON_EVENT_38;
-
-	default:
-		return "";
-	}
-}
-public String getCON_EVENT_39() {
-	switch (international_code) {
-	case 0:
-		return German.CON_EVENT_39;
-	case 1:
-		return Chinese.CON_EVENT_39;
-
-	default:
-		return "";
-	}
-}
-public String getCON_EVENT_40() {
-	switch (international_code) {
-	case 0:
-		return German.CON_EVENT_40;
-	case 1:
-		return Chinese.CON_EVENT_40;
-
-	default:
-		return "";
-	}
-}
 public String getJPG_EVENT_10() {
 	switch (international_code) {
 	case 0:
-		return German.JPG_EVENT_10;
+		return German.JPG_EVENT_1;
 	case 1:
-		return Chinese.JPG_EVENT_10;
+		return Chinese.JPG_EVENT_1;
 
 	default:
 		return "";
@@ -844,9 +800,9 @@ public String getJPG_EVENT_10() {
 public String getJPG_EVENT_20() {
 	switch (international_code) {
 	case 0:
-		return German.JPG_EVENT_20;
+		return German.JPG_EVENT_2;
 	case 1:
-		return Chinese.JPG_EVENT_20;
+		return Chinese.JPG_EVENT_2;
 
 	default:
 		return "";
@@ -855,9 +811,9 @@ public String getJPG_EVENT_20() {
 public String getJPG_EVENT_30() {
 	switch (international_code) {
 	case 0:
-		return German.JPG_EVENT_30;
+		return German.JPG_EVENT_3;
 	case 1:
-		return Chinese.JPG_EVENT_30;
+		return Chinese.JPG_EVENT_3;
 
 	default:
 		return "";
@@ -866,9 +822,9 @@ public String getJPG_EVENT_30() {
 public String getJPG_EVENT_40() {
 	switch (international_code) {
 	case 0:
-		return German.JPG_EVENT_40;
+		return German.JPG_EVENT_4;
 	case 1:
-		return Chinese.JPG_EVENT_40;
+		return Chinese.JPG_EVENT_4;
 
 	default:
 		return "";

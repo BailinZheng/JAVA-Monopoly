@@ -20,7 +20,7 @@ public class JPanelGame extends JPanel{
 	private JLayeredPane layeredPane;
 
 	private List<Layer> lays = null;
-	private Background backgroundUI = null;
+	private Hintergrund backgroundUI = null;
 	private Lands landsUI = null;
 	private Buildings buildingsUI = null;
 	private Players playersUI = null;
@@ -80,7 +80,7 @@ public class JPanelGame extends JPanel{
 	 */
 	private void initUI() {
 		// 创建背景UI
-		this.backgroundUI = new Background(0, 0, 950, 650,
+		this.backgroundUI = new Hintergrund(0, 0, 950, 650,
 				control.getBackground(),this);
 		// 创建土地UI
 		this.landsUI = new Lands(posX, posY, 950, 650, control.getLand());
@@ -107,7 +107,7 @@ public class JPanelGame extends JPanel{
 		// 玩家信息面板显示
 		this.playerInfo = new PlayerInfo(control.getPlayers(),this);
 		// 对话UI
-		this.massageYesNo = new MassageYesNo(UI_Language.getLanguage().getJPG_EVENT_1(), "创建一个对话框", this);
+		this.massageYesNo = new MassageYesNo(UI_Language.getLanguage().getJPG_EVENT_10(),"创建一个对话框", this);
 		// 对话UI
 		this.massageOk = new MassageOk("确定框", "创建一个对话框", this);
 		// 对话UI
@@ -182,7 +182,7 @@ public class JPanelGame extends JPanel{
 		return layeredPane;
 	}
 
-	public Background getBackgroundUI() {
+	public Hintergrund getBackgroundUI() {
 		return backgroundUI;
 	}
 

@@ -1028,8 +1028,8 @@ public class Control {
 	 */
 	private void useCrossingCard(Card card) {
 		Object[] options1 = { UI_Language.getLanguage().getCON_EVENT_31() };
-		JOptionPane.showOptionDialog(null, " 嫁祸卡在大事件发生时会自动使用.",
-				"卡片使用阶段.", JOptionPane.YES_OPTION,
+		JOptionPane.showOptionDialog(null, UI_Language.getLanguage().getCON_EVENT_32(),
+				UI_Language.getLanguage().getCON_EVENT_33(), JOptionPane.YES_OPTION,
 				JOptionPane.PLAIN_MESSAGE, null, options1,
 				options1[0]);
 	}
@@ -1040,10 +1040,10 @@ public class Control {
 	 * 
 	 */
 	private void useTrapCard(Card card) {
-		Object[] options = { "确认使用",UI_Language.getLanguage().getCON_EVENT_31() };
-		int response = JOptionPane.showOptionDialog(null, "确认使用\"陷害卡\"将 \""
-				+ card.getOwner().getOtherPlayer().getName() + "\"入狱2天?",
-				"卡片使用阶段.", JOptionPane.YES_OPTION, JOptionPane.PLAIN_MESSAGE,
+		Object[] options = { UI_Language.getLanguage().getCON_EVENT_34(),UI_Language.getLanguage().getCON_EVENT_31() };
+		int response = JOptionPane.showOptionDialog(null, "Verwendung bestätigen \"gerahmte card\"wille \""
+				+ card.getOwner().getOtherPlayer().getName() + "\"zwei Tage Gefängnis?",
+				UI_Language.getLanguage().getCON_EVENT_33(), JOptionPane.YES_OPTION, JOptionPane.PLAIN_MESSAGE,
 				null, options, options[0]);
 		if (response == 0) {
 			// 使用
@@ -1058,9 +1058,9 @@ public class Control {
 			// 增加文本提示
 			this.textTip
 					.showTextTip(card.getOwner(), card.getOwner().getName()
-							+ " 使用了 \"陷害卡\"，将 \""
+							+ " benutzt \"gerahmte card\", wille \""
 							+ card.getOwner().getOtherPlayer().getName()
-							+ "\"入狱2天.", 2);
+							+ "\"zwei Tage Gefängnis?.", 2);
 			// 　减去卡片
 			card.getOwner().getCards().remove(card);
 		}
@@ -1076,21 +1076,21 @@ public class Control {
 		Object[] options = { card.getOwner().getName(),
 				card.getOwner().getOtherPlayer().getName(), UI_Language.getLanguage().getCON_EVENT_31()};
 		int response = JOptionPane.showOptionDialog(null,
-				" 请选择目标玩家，对其打出\"乌龟卡\".", "卡片使用阶段.", JOptionPane.YES_OPTION,
+				" Bitte wählen Sie einen Zielspieler aus，\"benutze es\"Tortoisecard\".", UI_Language.getLanguage().getCON_EVENT_33(), JOptionPane.YES_OPTION,
 				JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
 		if (response == 0) {
 			card.getOwner().getEffectCards().add(card);
 			card.seteOwner(card.getOwner());
 			// 增加文本提示
 			this.textTip.showTextTip(card.getOwner(), card.getOwner().getName()
-					+ " 对自己使用了\"乌龟卡\". ", 2);
+					+ "an mir selbst verwendet \"Tortoisecard\". ", 2);
 			card.getOwner().getCards().remove(card);
 		} else if (response == 1) {
 			card.getOwner().getOtherPlayer().getEffectCards().add(card);
 			card.seteOwner(card.getOwner().getOtherPlayer());
 			this.textTip.showTextTip(card.getOwner(), card.getOwner().getName()
-					+ " 对\"" + card.getOwner().getOtherPlayer().getName()
-					+ "\"使用了\"乌龟卡\". ", 2);
+					+ " benutzt\"" + card.getOwner().getOtherPlayer().getName()
+					+ "\"\"Tortoisecard\". ", 2);
 			card.getOwner().getCards().remove(card);
 		}
 	}
@@ -1102,10 +1102,10 @@ public class Control {
 	 * 
 	 */
 	private void useTallageCard(Card card) {
-		Object[] options = { "确认使用", UI_Language.getLanguage().getCON_EVENT_31() };
-		int response = JOptionPane.showOptionDialog(null, "确认使用\"查税卡\"从 \""
-				+ card.getOwner().getOtherPlayer().getName() + "\"手中获得 10%税款?",
-				"卡片使用阶段.", JOptionPane.YES_OPTION, JOptionPane.PLAIN_MESSAGE,
+		Object[] options = { UI_Language.getLanguage().getCON_EVENT_34(), UI_Language.getLanguage().getCON_EVENT_31() };
+		int response = JOptionPane.showOptionDialog(null, "Verwendung bestätigen\"Steuercard\"von \""
+				+ card.getOwner().getOtherPlayer().getName() + "\"bekommt 10% Steuer ?",
+				UI_Language.getLanguage().getCON_EVENT_33(), JOptionPane.YES_OPTION, JOptionPane.PLAIN_MESSAGE,
 				null, options, options[0]);
 		if (response == 0) {
 			// 使用
@@ -1116,9 +1116,9 @@ public class Control {
 					.setCash(card.getOwner().getOtherPlayer().getCash() - money);
 			// 增加文本提示
 			this.textTip.showTextTip(card.getOwner(), card.getOwner().getName()
-					+ " 使用了 \"查税卡\"，从 \""
+					+ " benutzt \"Steuercard\"，von \""
 					+ card.getOwner().getOtherPlayer().getName()
-					+ "\"手中获得 10%税款", 2);
+					+ "\" bekommt 10% Steuer ", 2);
 			// 　减去卡片
 			card.getOwner().getCards().remove(card);
 		}
@@ -1134,21 +1134,21 @@ public class Control {
 		Object[] options = { card.getOwner().getName(),
 				card.getOwner().getOtherPlayer().getName(), UI_Language.getLanguage().getCON_EVENT_31() };
 		int response = JOptionPane.showOptionDialog(null,
-				" 请选择目标玩家，对其打出\"停留卡\".", "卡片使用阶段.", JOptionPane.YES_OPTION,
+				" Bitte wählen Sie den Zielspieler aus und spielen Sie gegen ihn\"Stopcard\".", UI_Language.getLanguage().getCON_EVENT_34(), JOptionPane.YES_OPTION,
 				JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
 		if (response == 0) {
 			card.getOwner().getEffectCards().add(card);
 			card.seteOwner(card.getOwner());
 			// 增加文本提示
 			this.textTip.showTextTip(card.getOwner(), card.getOwner().getName()
-					+ " 对自己使用了\"停留卡\". ", 2);
+					+ " an mir selbst verwendet\"Stopcard\". ", 2);
 			card.getOwner().getCards().remove(card);
 		} else if (response == 1) {
 			card.getOwner().getOtherPlayer().getEffectCards().add(card);
 			card.seteOwner(card.getOwner().getOtherPlayer());
 			this.textTip.showTextTip(card.getOwner(), card.getOwner().getName()
-					+ " 对\"" + card.getOwner().getOtherPlayer().getName()
-					+ "\"使用了\"停留卡\". ", 2);
+					+ " benutzt\"" + card.getOwner().getOtherPlayer().getName()
+					+ "\"\"Stopcard\". ", 2);
 			card.getOwner().getCards().remove(card);
 		}
 	}
@@ -1164,15 +1164,15 @@ public class Control {
 		if (card.getOwner().getCards().size() >= PlayerModel.MAX_CAN_HOLD_CARDS) {
 			// 无法使用
 			Object[] options = { UI_Language.getLanguage().getCON_EVENT_31() };
-			JOptionPane.showOptionDialog(null, " 您的卡片数量已经达到上限，无法使用\"抢夺卡\"",
-					"卡片使用阶段.", JOptionPane.YES_OPTION,
+			JOptionPane.showOptionDialog(null, " Ihre Kartenanzahl hat das Limit erreicht und kann nicht verwendet werden\"Robcard\"",
+					UI_Language.getLanguage().getCON_EVENT_33(), JOptionPane.YES_OPTION,
 					JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
 		} else if (card.getOwner().getOtherPlayer().getCards().size() == 0) {
 			// 无法使用
 			Object[] options = { UI_Language.getLanguage().getCON_EVENT_31() };
 			JOptionPane.showOptionDialog(null, " \""
 					+ card.getOwner().getOtherPlayer().getName()
-					+ "\"没有卡片，无法使用\"抢夺卡\"", "卡片使用阶段.", JOptionPane.YES_OPTION,
+					+ "\"Keine Karte, kann nicht verwendet werden\"Robcard\"", UI_Language.getLanguage().getCON_EVENT_33(), JOptionPane.YES_OPTION,
 					JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
 		} else {
 			PlayerModel srcPlayer = card.getOwner().getOtherPlayer();
@@ -1187,7 +1187,7 @@ public class Control {
 			getCard.setOwner(card.getOwner());
 			// 增加文本提示
 			this.textTip.showTextTip(card.getOwner(), card.getOwner().getName()
-					+ " 使用了 \"抢夺卡\"，抢夺了 \"" + srcPlayer.getName() + "\"的一张\""
+					+ " benutzt \"Robcard\"，schnappt \"" + srcPlayer.getName() + "\"ein\""
 					+ getCard.getcName() + ".\". ", 2);
 			// 　减去卡片
 			card.getOwner().getCards().remove(card);
@@ -1210,22 +1210,22 @@ public class Control {
 				// 增加文本提示
 				this.textTip.showTextTip(card.getOwner(), card.getOwner()
 						.getName()
-						+ " 使用了 \"降级卡\"，将\""
+						+ " benutzt \"ReduceLevelcard\"，\""
 						+ card.getOwner().getOtherPlayer().getName()
-						+ "\"的房屋等级降低一级. ", 2);
+						+ "\"\"Haus eine Ebene tiefer. ", 2);
 				// 　减去卡片
 				card.getOwner().getCards().remove(card);
 			} else {
 				// 无法使用,不可降级
 				Object[] options = { UI_Language.getLanguage().getCON_EVENT_31() };
-				JOptionPane.showOptionDialog(null, " 当前房屋不可降级", "卡片使用阶段.",
+				JOptionPane.showOptionDialog(null, " \"Das aktuelle Zuhause kann nicht heruntergestuft werden", UI_Language.getLanguage().getCON_EVENT_33(),
 						JOptionPane.YES_OPTION, JOptionPane.PLAIN_MESSAGE,
 						null, options, options[0]);
 			}
 		} else {
 			// 无法使用.
 			Object[] options = { UI_Language.getLanguage().getCON_EVENT_31() };
-			JOptionPane.showOptionDialog(null, " 当前房屋不能使用该卡片.", "卡片使用阶段.",
+			JOptionPane.showOptionDialog(null, "Das aktuelle Haus kann die Wechselkarte nicht verwenden.", UI_Language.getLanguage().getCON_EVENT_33(),
 					JOptionPane.YES_OPTION, JOptionPane.PLAIN_MESSAGE, null,
 					options, options[0]);
 		}
@@ -1242,10 +1242,10 @@ public class Control {
 				card.getOwner().getY() / 60, card.getOwner().getX() / 60);
 		if (building.getOwner() != null
 				&& building.getOwner().equals(card.getOwner().getOtherPlayer())) {// 是对方的房屋
-			Object[] options = { "确认使用", UI_Language.getLanguage().getCON_EVENT_31() };
+			Object[] options = { UI_Language.getLanguage().getCON_EVENT_34(), UI_Language.getLanguage().getCON_EVENT_31() };
 			int response = JOptionPane.showOptionDialog(null,
-					"确认使用\"购地卡\"将此地收购？需要花费：" + building.getAllPrice() + " 金币.",
-					"卡片使用阶段.", JOptionPane.YES_OPTION,
+					"Verwendung bestätigen\"Havecard\"Kaufst du diese Land？kostet：" + building.getAllPrice() + "  UI_Language.getLanguage().getCON_EVENT_4().",
+					UI_Language.getLanguage().getCON_EVENT_33(), JOptionPane.YES_OPTION,
 					JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
 			if (response == 0) {
 				if (card.getOwner().getCash() >= building.getAllPrice()) {
@@ -1258,20 +1258,20 @@ public class Control {
 					building.setOwner(card.getOwner());
 					// 增加文本提示
 					this.textTip.showTextTip(card.getOwner(), card.getOwner()
-							.getName() + " 使用了 \"购地卡\"，收购获得了该土地. ", 2);
+							.getName() + " benutzt \"Havecard\"，haben Sie diese Land erwerben. ", 2);
 					// 　减去卡片
 					card.getOwner().getCards().remove(card);
 				} else {
 					Object[] options1 = { UI_Language.getLanguage().getCON_EVENT_31() };
-					JOptionPane.showOptionDialog(null, " 金币不足，无法购买房屋!",
-							"卡片使用阶段.", JOptionPane.YES_OPTION,
+					JOptionPane.showOptionDialog(null, " Nicht genug Goldmünzen, um ein Haus zu kaufen!",
+							UI_Language.getLanguage().getCON_EVENT_33(), JOptionPane.YES_OPTION,
 							JOptionPane.PLAIN_MESSAGE, null, options1,
 							options1[0]);
 				}
 			}
 		} else {
 			Object[] options1 = { UI_Language.getLanguage().getCON_EVENT_31() };
-			JOptionPane.showOptionDialog(null, "此房屋无法使用该卡片.", "卡片使用阶段.",
+			JOptionPane.showOptionDialog(null, "Die Karte kann für dieses Haus nicht verwendet werden.", UI_Language.getLanguage().getCON_EVENT_33(),
 					JOptionPane.YES_OPTION, JOptionPane.PLAIN_MESSAGE, null,
 					options1, options1[0]);
 		}
@@ -1285,9 +1285,9 @@ public class Control {
 	 * 
 	 */
 	private void useControlDiceCard(Card card) {
-		Object[] options = { "1点", "2点", "3点", "4点", "5点", "6点", UI_Language.getLanguage().getCON_EVENT_31() };
+		Object[] options = { "1", "2", "3", "4", "5", "6", UI_Language.getLanguage().getCON_EVENT_31() };
 		int response = JOptionPane.showOptionDialog(null,
-				"确认使用\"遥控骰子卡\"遥控骰子点数?", "卡片使用阶段.", JOptionPane.YES_OPTION,
+				"Verwendung bestätigen\"ControlDiceCard\"Würfelpunkte fernsteuern?",  UI_Language.getLanguage().getCON_EVENT_4(), JOptionPane.YES_OPTION,
 				JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
 		if (response == -1 || response == 6) {
 			return;
@@ -1296,7 +1296,7 @@ public class Control {
 			this.run.setPoint(response);
 			// 增加文本提示
 			this.textTip.showTextTip(card.getOwner(), card.getOwner().getName()
-					+ " 使用了 \"遥控骰子卡\".", 2);
+					+ " benutzt \"ControlDiceCard\".", 2);
 			// 　减去卡片
 			card.getOwner().getCards().remove(card);
 		}
@@ -1312,9 +1312,9 @@ public class Control {
 				card.getOwner().getY() / 60, card.getOwner().getX() / 60);
 		if (building.getOwner() != null
 				&& building.getOwner().equals(card.getOwner().getOtherPlayer())) {// 是对手房屋
-			Object[] options = { "确认使用", UI_Language.getLanguage().getCON_EVENT_31() };
+			Object[] options = { UI_Language.getLanguage().getCON_EVENT_34(), UI_Language.getLanguage().getCON_EVENT_31() };
 			int response = JOptionPane.showOptionDialog(null,
-					"确认使用\"换屋卡\"与对手交换一块同类型的房屋（随机）", "卡片使用阶段.",
+					"\"ChangeCard\"\"Tausche ein Haus des gleichen Typs mit einem Mitspieler (zufällig）", "Kartennutzungsphase.",
 					JOptionPane.YES_OPTION, JOptionPane.PLAIN_MESSAGE, null,
 					options, options[0]);
 			if (response == 0) {
@@ -1334,22 +1334,22 @@ public class Control {
 					// 增加文本提示
 					this.textTip.showTextTip(card.getOwner(), card.getOwner()
 							.getName()
-							+ " 使用了 \"换屋卡\"，将某处房屋与"
+							+ " benutzt \"ChangeCard\"，tauschen ein Haus"
 							+ card.getOwner().getOtherPlayer().getName()
-							+ "该地的房屋进行交换.. ", 2);
+							+ "zu diese Hause.. ", 2);
 					// 　减去卡片
 					card.getOwner().getCards().remove(card);
 				} else {
 					Object[] options1 = { UI_Language.getLanguage().getCON_EVENT_31() };
-					JOptionPane.showOptionDialog(null, " 当前房屋不可使用\"换屋卡\"",
-							"卡片使用阶段.", JOptionPane.YES_OPTION,
+					JOptionPane.showOptionDialog(null, " Das aktuelle Hause ist nicht verfügbar\"ChangeCard\"",
+							UI_Language.getLanguage().getCON_EVENT_33(), JOptionPane.YES_OPTION,
 							JOptionPane.PLAIN_MESSAGE, null, options1,
 							options1[0]);
 				}
 			}
 		} else {
 			Object[] options = { UI_Language.getLanguage().getCON_EVENT_31() };
-			JOptionPane.showOptionDialog(null, " 当前房屋不可使用\"换屋卡\"", "卡片使用阶段.",
+			JOptionPane.showOptionDialog(null, " Das aktuelle Hause ist nicht verfügbar\"ChangeCard\"", UI_Language.getLanguage().getCON_EVENT_33(),
 					JOptionPane.YES_OPTION, JOptionPane.PLAIN_MESSAGE, null,
 					options, options[0]);
 		}
@@ -1361,9 +1361,9 @@ public class Control {
 	 * 
 	 */
 	private void useAveragerPoorCard(Card card) {
-		Object[] options = { "确认使用", UI_Language.getLanguage().getCON_EVENT_31() };
+		Object[] options = { UI_Language.getLanguage().getCON_EVENT_34(), UI_Language.getLanguage().getCON_EVENT_31() };
 		int response = JOptionPane.showOptionDialog(null,
-				"确认使用\"均贫卡\"与对手平分现金?", "卡片使用阶段.", JOptionPane.YES_OPTION,
+				"Verwendung bestätigen\"Average card\"Teilen Sie Bargeld zu gleichen Teilen mit Ihrem Gegner?", UI_Language.getLanguage().getCON_EVENT_33(), JOptionPane.YES_OPTION,
 				JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
 		if (response == 0) {
 			// 使用
@@ -1373,7 +1373,8 @@ public class Control {
 			card.getOwner().getOtherPlayer().setCash(money);
 			// 增加文本提示
 			this.textTip.showTextTip(card.getOwner(), card.getOwner().getName()
-					+ " 使用了 \"均贫卡\"，与对手平分了现金,现在双方现金数为:" + money + " 金币. ", 2);
+					+ " benutzt \"Average card\"，\n"
+					+ "Das Bargeld wird zu gleichen Teilen mit dem Gegner geteilt, und jetzt ist der Bargeldbetrag beider Seiten:" + money + " Gold. ", 2);
 
 			// 　减去卡片
 			card.getOwner().getCards().remove(card);
@@ -1396,20 +1397,22 @@ public class Control {
 				building.setLevel(building.getLevel() + 1);
 				// 增加文本提示
 				this.textTip.showTextTip(card.getOwner(), card.getOwner()
-						.getName() + " 使用了 \"加盖卡\"，将房屋等级提升一级. ", 2);
+						.getName() + " benutzt \"Levelupcard\"，Erhöhen Sie das Hauslevel um ein Level. ", 2);
 				// 　减去卡片
 				card.getOwner().getCards().remove(card);
 			} else {
 				// 无法使用,不可升级
 				Object[] options = { UI_Language.getLanguage().getCON_EVENT_31() };
-				JOptionPane.showOptionDialog(null, " 当前房屋不可升级.", "卡片使用阶段.",
+				JOptionPane.showOptionDialog(null, " Das aktuelle Hause ist nicht erweiterbar\n"
+						+ ".", UI_Language.getLanguage().getCON_EVENT_33(),
 						JOptionPane.YES_OPTION, JOptionPane.PLAIN_MESSAGE,
 						null, options, options[0]);
 			}
 		} else {
 			// 无法使用.
 			Object[] options = { UI_Language.getLanguage().getCON_EVENT_31() };
-			JOptionPane.showOptionDialog(null, " 当前房屋不能使用该卡片.", "卡片使用阶段.",
+			JOptionPane.showOptionDialog(null, " \n"
+					+ "Die Karte kann im aktuellen Haus nicht verwendet werden.", UI_Language.getLanguage().getCON_EVENT_33(),
 					JOptionPane.YES_OPTION, JOptionPane.PLAIN_MESSAGE, null,
 					options, options[0]);
 		}
@@ -1453,14 +1456,15 @@ public class Control {
 	public boolean buyCard(Shop_ shop, int p) {
 		if (this.panel.getShop().getCard().get(p) != null) {
 			if (this.run.getNowPlayer().getCards().size() >= PlayerModel.MAX_CAN_HOLD_CARDS) {
-				JOptionPane.showMessageDialog(null, "您最大可持有:"
-						+ PlayerModel.MAX_CAN_HOLD_CARDS + "张卡片,目前已经不能再购买了!");
+				JOptionPane.showMessageDialog(null, "\n"
+						+ "Sie können das Maximum halten:"
+						+ PlayerModel.MAX_CAN_HOLD_CARDS + "Karte, die nicht mehr zum Kauf angeboten wird!");
 				return false;
 			}
 			if (this.run.getNowPlayer().getNx() < shop.getCards().get(p)
 					.getPrice()) {
-				JOptionPane.showMessageDialog(null, "当前卡片需要:"
-						+ shop.getCards().get(p).getPrice() + "点卷,您的点卷不足.");
+				JOptionPane.showMessageDialog(null, "Die aktuelle Karte erfordert:"
+						+ shop.getCards().get(p).getPrice() + "Punktwurf, dein Punktwurf ist nicht genug.");
 				return false;
 			}
 			// 设置卡片拥有者

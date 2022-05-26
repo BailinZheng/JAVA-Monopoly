@@ -66,6 +66,11 @@ public final class German extends AllLanguages {
 	public static String CON_EVENT_29 = "Wählen Sie die Karte aus, die Sie verwenden möchten ";
 	public static String CON_EVENT_30 = "Kartennutzungsphase ";
 	public static String CON_EVENT_31 = "erneut auswählen ";
+	public static String CON_EVENT_32 = "Die Schuldkarte wird automatisch verwendet, wenn ein größeres Ereignis eintritt  ";
+	public static String CON_EVENT_33 = "Kartennutzungsphase ";
+	public static String CON_EVENT_34 = "Verwendung bestätigen ";
+	public static String CON_EVENT_35 = "gerahmte card ";
+	public static String CON_EVENT_36 = "wille ";
 	public static String JPG_EVENT_1 = "Auswahlfeld ";
 	public static String JPG_EVENT_2 = "Erstellen Sie einen Dialog ";
 	public static String JPG_EVENT_3 = "OK-Box ";
