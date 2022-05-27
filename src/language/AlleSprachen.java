@@ -1,6 +1,6 @@
 package language;
 
-public class AllLanguages {
+public class AlleSprachen {
 	private final int international_code = 0; // German = 0; Chinese = 1; English = 2;
 
 	public String getPRISON_EVENT_1() {
@@ -786,7 +786,7 @@ public String getCON_EVENT_36() {
 		return "";
 	}
 }
-public String getJPG_EVENT_10() {
+public String getJPG_EVENT_1() {
 	switch (international_code) {
 	case 0:
 		return German.JPG_EVENT_1;
@@ -797,7 +797,7 @@ public String getJPG_EVENT_10() {
 		return "";
 	}
 }
-public String getJPG_EVENT_20() {
+public String getJPG_EVENT_2() {
 	switch (international_code) {
 	case 0:
 		return German.JPG_EVENT_2;
@@ -808,7 +808,7 @@ public String getJPG_EVENT_20() {
 		return "";
 	}
 }
-public String getJPG_EVENT_30() {
+public String getJPG_EVENT_3() {
 	switch (international_code) {
 	case 0:
 		return German.JPG_EVENT_3;
@@ -819,12 +819,89 @@ public String getJPG_EVENT_30() {
 		return "";
 	}
 }
-public String getJPG_EVENT_40() {
+public String getJPG_EVENT_4() {
 	switch (international_code) {
 	case 0:
 		return German.JPG_EVENT_4;
 	case 1:
 		return Chinese.JPG_EVENT_4;
+
+	default:
+		return "";
+	}
+}
+public String getPI_EVENT_1() {
+	switch (international_code) {
+	case 0:
+		return German.PI_EVENT_1;
+	case 1:
+		return Chinese.PI_EVENT_1;
+
+	default:
+		return "";
+	}
+}
+public String getPI_EVENT_2() {
+	switch (international_code) {
+	case 0:
+		return German.PI_EVENT_2;
+	case 1:
+		return Chinese.PI_EVENT_2;
+
+	default:
+		return "";
+	}
+}
+public String getPI_EVENT_3() {
+	switch (international_code) {
+	case 0:
+		return German.PI_EVENT_3;
+	case 1:
+		return Chinese.PI_EVENT_3;
+
+	default:
+		return "";
+	}
+}
+public String getPP_EVENT_1() {
+	switch (international_code) {
+	case 0:
+		return German.PP_EVENT_1;
+	case 1:
+		return Chinese.PP_EVENT_1;
+
+	default:
+		return "";
+	}
+}
+public String getPP_EVENT_2() {
+	switch (international_code) {
+	case 0:
+		return German.PP_EVENT_2;
+	case 1:
+		return Chinese.PP_EVENT_2;
+
+	default:
+		return "";
+	}
+}
+public String getPP_EVENT_3() {
+	switch (international_code) {
+	case 0:
+		return German.PP_EVENT_3;
+	case 1:
+		return Chinese.PP_EVENT_3;
+
+	default:
+		return "";
+	}
+}
+public String getPP_EVENT_4() {
+	switch (international_code) {
+	case 0:
+		return German.PP_EVENT_4;
+	case 1:
+		return Chinese.PP_EVENT_4;
 
 	default:
 		return "";

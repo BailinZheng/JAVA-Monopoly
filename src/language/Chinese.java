@@ -1,6 +1,6 @@
 package language;
 
-public final class Chinese extends AllLanguages {
+public final class Chinese extends AlleSprachen {
 	public static String PRISON_EVENT_1 =  "去监狱看望好友";
 	public static String PRISON_EVENT_2 = "被冤枉入狱";
 	public static String PRISON_EVENT_3 = "被罚清理监狱";
@@ -74,5 +74,13 @@ public final class Chinese extends AllLanguages {
 	public static String JPG_EVENT_2 = "创建一个对话框";
 	public static String JPG_EVENT_3 = "确定框";
 	public static String JPG_EVENT_4 = "多选框";
+	public static String PI_EVENT_1 = "达到游戏天数";
+	public static String PI_EVENT_2 = "天";
+	public static String PI_EVENT_3 = "结束原因";
+	public static String PP_EVENT_1 = "金币";
+	public static String PP_EVENT_2 = "点券";
+	public static String PP_EVENT_3 = "房屋";
+	public static String PP_EVENT_4 = "卡牌";
+	
 	}
 

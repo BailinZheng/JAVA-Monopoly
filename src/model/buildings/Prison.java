@@ -8,7 +8,7 @@ import model.TextTipModel;
 
 import context.GameState;
 import control.Control;
-import language.AllLanguages;
+import language.AlleSprachen;
 import language.German;
 import language.UI_Language;
 

@@ -2,11 +2,11 @@ package language;
 
 // Design Pattern Singleton
 public class UI_Language {
-	private static AllLanguages al = null;
+	private static AlleSprachen al = null;
 	
-	public static AllLanguages getLanguage()
+	public static AlleSprachen getLanguage()
 	{
-		if (null == al) al = new AllLanguages();
+		if (null == al) al = new AlleSprachen();
 		
 		
 		return al;

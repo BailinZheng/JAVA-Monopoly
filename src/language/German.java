@@ -1,6 +1,6 @@
 package language;
 
-public final class German extends AllLanguages {
+public final class German extends AlleSprachen {
 
 	public static String PRISON_EVENT_1 = "Besuch eines Kumpels ";
 	public static String PRISON_EVENT_2 = "zu Unrecht eingesperrt ";  
@@ -42,7 +42,7 @@ public final class German extends AllLanguages {
 	public static String CON_EVENT_5 = "Derzeit im Krankenhaus, kann sich nicht bewegen ";
 	public static String CON_EVENT_6 = "Derzeit im Gefängnis, kann sich nicht bewegen ";
 	public static String CON_EVENT_7 = "Stop ";
-	public static String CON_EVENT_8 = "Erwerben ";
+	public static String CON_EVENT_8 = "erwerben ";
 	public static String CON_EVENT_9 = "Punktrolle ";
 	public static String CON_EVENT_10 = "Stopp am Startpunkt, Belohnung ";
 	public static String CON_EVENT_11 = "Gib 3000 zu ";
@@ -75,5 +75,13 @@ public final class German extends AllLanguages {
 	public static String JPG_EVENT_2 = "Erstellen Sie einen Dialog ";
 	public static String JPG_EVENT_3 = "OK-Box ";
 	public static String JPG_EVENT_4 = "Kontrollbox ";
+	public static String PI_EVENT_1 = "Spieltage erreicht";
+	public static String PI_EVENT_2 = "Tag";
+	public static String PI_EVENT_3 = "Endgrund";
+	public static String PP_EVENT_1 = "Gold";
+	public static String PP_EVENT_2 = "Punktrolle";
+	public static String PP_EVENT_3 = "Hause";
+	public static String PP_EVENT_4 = "card";
+	
 	}
 

@@ -107,11 +107,11 @@ public class JPanelGame extends JPanel{
 		// 玩家信息面板显示
 		this.playerInfo = new PlayerInfo(control.getPlayers(),this);
 		// 对话UI
-		this.massageYesNo = new MassageYesNo(UI_Language.getLanguage().getJPG_EVENT_10(),"创建一个对话框", this);
+		this.massageYesNo = new MassageYesNo(UI_Language.getLanguage().getJPG_EVENT_1(),UI_Language.getLanguage().getJPG_EVENT_2(), this);
 		// 对话UI
-		this.massageOk = new MassageOk("确定框", "创建一个对话框", this);
+		this.massageOk = new MassageOk(UI_Language.getLanguage().getJPG_EVENT_3(), UI_Language.getLanguage().getJPG_EVENT_2(), this);
 		// 对话UI
-		this.massageSimple = new MassageSimple("多选框", "创建一个对话框", this);
+		this.massageSimple = new MassageSimple(UI_Language.getLanguage().getJPG_EVENT_4(), UI_Language.getLanguage().getJPG_EVENT_2(), this);
 
 		// lays存放所有panel组件
 		lays = new ArrayList<Layer>();

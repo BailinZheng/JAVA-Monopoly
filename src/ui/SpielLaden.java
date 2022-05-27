@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 import model.PlayerModel;
 
 
-public class GameShop implements MouseListener, MouseMotionListener {
+public class SpielLaden implements MouseListener, MouseMotionListener {
 
 	/**
 	 * 游戏主窗口
@@ -32,14 +32,14 @@ public class GameShop implements MouseListener, MouseMotionListener {
 	 */
 	static Point origin = new Point();
 
-	public GameShop(JFrameGame mainFrame, PlayerModel player) {
+	public SpielLaden(JFrameGame mainFrame, PlayerModel player) {
 		this.mainFrame = mainFrame;
 		this.player = player;
 		// 创建面板
 		//createWindow();
 	}
 	public static void main(String[] args) {
-		new GameShop(null, null);
+		new SpielLaden(null, null);
 	}
 	private void createWindow() {
 		frame = new JFrame();

@@ -52,7 +52,7 @@ public class MassageSimple extends Massage {
 
 	private void addTextArea() {
 		textArea = new JTextArea();
-		textArea.setText("我了个去。。");
+		textArea.setText("SHIT");
 		textArea.setBounds(18, 39, 230, 50);
 		textArea.setSelectedTextColor(Color.BLUE);
 		textArea.setOpaque(false);

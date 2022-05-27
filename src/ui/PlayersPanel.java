@@ -6,6 +6,7 @@ import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.util.List;
 
+import language.UI_Language;
 import model.PlayerModel;
 
 /**
@@ -48,10 +49,10 @@ public class PlayersPanel extends Layer {
 			int y) {
 		// 玩家信息字符串
 		String[] information = { player.getName(),
-				Integer.toString(player.getCash()) + " 金币",
-				Integer.toString(player.getNx()) + " 点卷",
-				Integer.toString(player.getBuildings().size()) + " 房屋",
-				Integer.toString(player.getCards().size()) + "卡片" };
+				Integer.toString(player.getCash()) + UI_Language.getLanguage().getPP_EVENT_1(), 
+				Integer.toString(player.getNx()) + UI_Language.getLanguage().getPP_EVENT_2(), 
+				Integer.toString(player.getBuildings().size()) + UI_Language.getLanguage().getPP_EVENT_3(), 
+				Integer.toString(player.getCards().size()) + UI_Language.getLanguage().getPP_EVENT_4()  };
 		// 头像(y += 60) + 20
 		g.drawImage(player.getIMG("mini_02"), x -26 + 15 , y - 10, x -26 + 15 +player.getIMG("mini_02").getWidth(null) ,
 				 y - 10 +player

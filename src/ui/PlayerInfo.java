@@ -14,7 +14,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 import control.GameRunning;
-
+import language.UI_Language;
 import model.PlayerModel;
 
 /**
@@ -105,24 +105,26 @@ public class PlayerInfo extends JPanel {
 		}
 		String str = "";
 		if (GameRunning.day >= GameRunning.GAME_DAY) {
-			str ="达到游戏天数 "+GameRunning.GAME_DAY+" 天.";
+			str =UI_Language.getLanguage().getJPG_EVENT_1()+GameRunning.GAME_DAY+UI_Language.getLanguage().getPI_EVENT_2();
 		}
 		//最大金钱
 		PlayerModel p1 = players.get(0);
 		PlayerModel p2 = players.get(1);
 		if (GameRunning.MONEY_MAX > 0 && p1.getCash() >= GameRunning.MONEY_MAX) {
-			str ="\"" + p1.getName() +"\" 金钱达到游戏金钱上限.";
+			str ="\"" + p1.getName() +"\" Das Geld erreicht das Spielgeldlimit.";
 		} else if (GameRunning.MONEY_MAX > 0 && p2.getCash() >= GameRunning.MONEY_MAX) {
-			str ="\"" + p2.getName() +"\" 金钱达到游戏金钱上限.";
+			str ="\"" + p2.getName() +"\" Das Geld erreicht das Spielgeldlimit.";
 		}
 		// 破产
 		if (p1.getCash() < 0 ){
-			str ="\"" + p1.getName() +"\"破产.";
+			str ="\"" + p1.getName() +"\"\n"
+					+ "Konkurs.";
 		} else if (p2.getCash() < 0 ){
-			str ="\"" + p2.getName() +"\"破产.";
+			str ="\"" + p2.getName() +"\"\n"
+					+ "Konkurs.";
 		}
 		FontMetrics fm = g.getFontMetrics();
-		g.drawString("结束原因："+str, 200 - fm.stringWidth(str)/2, 86);
+		g.drawString(UI_Language.getLanguage().getPI_EVENT_3()+str, 200 - fm.stringWidth(str)/2, 86);
 	}
 
 	private void drawPlayer(Graphics g, PlayerModel player,int y) {

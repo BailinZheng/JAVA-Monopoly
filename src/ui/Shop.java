@@ -18,7 +18,7 @@ import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
 
 import control.Control;
-
+import language.UI_Language;
 import model.PlayerModel;
 
 import model.buildings.Shop_;
@@ -309,7 +309,7 @@ public class Shop extends JPanel {
 		// 当前卡片价格
 		g.setColor(Color.WHITE);
 		g.setFont(new Font(null, 0, 14));
-		String str = tempCard.getPrice() + "点卷";
+		String str = tempCard.getPrice() + UI_Language.getLanguage().getPP_EVENT_2();
 		FontMetrics fm = g.getFontMetrics();
 		g.drawString(str, position.x + atWhere.x + 80 - fm.stringWidth(str),
 				position.y + atWhere.y + 110);
@@ -363,7 +363,7 @@ public class Shop extends JPanel {
 		g.drawString(player.getNx() + "",
 				position.x + 151 + 90 - fm.stringWidth(player.getNx() + ""),
 				position.y + 252 + 21 * 4 + 14);
-		g.drawString("   点卷", position.x + 151, position.y + 252 + 21 * 4 + 14);
+		g.drawString(UI_Language.getLanguage().getPP_EVENT_2(), position.x + 151, position.y + 252 + 21 * 4 + 14);
 	}
 
 	/**

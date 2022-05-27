@@ -22,7 +22,7 @@ public class Massage extends JPanel {
 
 	protected int x, y, w, h;
 
-	protected String titileStr = "БъЬт";
+	protected String titileStr = "titile";
 	protected JLabel titile  = null;
 
 	protected JPanelGame panel = null;
