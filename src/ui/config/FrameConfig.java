@@ -33,39 +33,40 @@ import ui.WaitFrame;
 import util.FrameUtil;
 import control.Control;
 import control.GameRunning;
+import language.UI_Language;
 
 /**
  * 
- * ¶ÁÈ¡ÓÃ»§ÅäÖÃ
+ * è¯»å–ç”¨æˆ·é…ç½®
  * 
  * */
 public class FrameConfig extends JFrame {
 
-	private JButton jbnStart = new JButton("¿ªÊ¼ÓÎÏ·");
-	//private JButton jbnradom = new JButton("Ëæ»ú");
-	private JButton jbnCancel = new JButton("ÖØÖÃÉè¶¨");
+	private JButton jbnStart = new JButton(UI_Language.getLanguage().getFC_EVENT_1());
+	//private JButton jbnradom = new JButton("éšæœº");
+	private JButton jbnCancel = new JButton(UI_Language.getLanguage().getFC_EVENT_2());
 
-	private JButton jbnPlayer01 = new JButton("1PÈ·ÈÏ½ÇÉ«");
-	private JLabel jbnPlayerNameLabel01 = new JLabel("Ãû×Ö:");
+	private JButton jbnPlayer01 = new JButton(UI_Language.getLanguage().getFC_EVENT_3());
+	private JLabel jbnPlayerNameLabel01 = new JLabel(UI_Language.getLanguage().getFC_EVENT_4());
 	private JTextField jbnPlayerNameField01 = new JTextField(12);
-	private JButton jbnPlayerName01 = new JButton("1PÈ·ÈÏÃû×Ö");
+	private JButton jbnPlayerName01 = new JButton(UI_Language.getLanguage().getFC_EVENT_5());
 
-	private JButton jbnPlayer02 = new JButton("2PÈ·ÈÏ½ÇÉ«");
-	private JLabel jbnPlayerNameLabel02 = new JLabel("Ãû×Ö:");
+	private JButton jbnPlayer02 = new JButton(UI_Language.getLanguage().getFC_EVENT_6());
+	private JLabel jbnPlayerNameLabel02 = new JLabel(UI_Language.getLanguage().getFC_EVENT_4());
 	private JTextField jbnPlayerNameField02 = new JTextField(12);
-	private JButton jbnPlayerName02 = new JButton("2PÈ·ÈÏÃû×Ö");
+	private JButton jbnPlayerName02 = new JButton(UI_Language.getLanguage().getFC_EVENT_7());
 
 	/**
-	 * Ñ¡Ïî¿¨
+	 * é€‰é¡¹å¡
 	 * */
 	private JTabbedPane tabs;
 
 	/**
-	 * ¿ÉÑ¡Í¼Æ¬
+	 * å¯é€‰å›¾ç‰‡
 	 * */
 	private ImageIcon[] img = Photo.PLAYER_CHOOSE;
 	/**
-	 * ÈËÎï1
+	 * äººç‰©1
 	 **/
 	private JLabel jlPlayer01Choose = null;
 	private final JLabel jlPlayer01Selected = new JLabel(
@@ -74,7 +75,7 @@ public class FrameConfig extends JFrame {
 	private JButton rightButton01;
 
 	/**
-	 * ÈËÎï2
+	 * äººç‰©2
 	 **/
 	private JLabel jlPlayer02Choose = null;
 	private final JLabel jlPlayer02Selected = new JLabel(
@@ -82,21 +83,21 @@ public class FrameConfig extends JFrame {
 	private JButton leftButton02;
 	private JButton rightButton02;
 	/**
-	 * 1P 2P¿ÉÑ¡ÈËÎï
+	 * 1P 2På¯é€‰äººç‰©
 	 */
 	private int[] chooses = { 0, 0 };
 	/**
-	 * 1P 2PÒÑÑ¡ÈËÎï
+	 * 1P 2På·²é€‰äººç‰©
 	 */
 	private int[] selected = { -1, -2 };
 	/**
-	 * 1P 2PÒÑÌîÃû×Ö
+	 * 1P 2På·²å¡«åå­—
 	 */
 	private String[] selectedName = { "", "" };
 
 	/**
 	 * 
-	 * Ö÷Ãæ°å
+	 * ä¸»é¢æ¿
 	 * 
 	 * */
 	private JFrameGame jFrameGame;
@@ -104,39 +105,39 @@ public class FrameConfig extends JFrame {
 	public FrameConfig(WaitFrame wFrame,JFrameGame jFrameGame) {
 		wFrame.setVisible(false);
 		this.jFrameGame = jFrameGame;
-		setTitle("ÓÃ»§Êı¾İÉè¶¨");
+		setTitle(UI_Language.getLanguage().getFC_EVENT_8());
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		// ÉèÖÃ²¼¾Ö¹ÜÀíÆ÷Îª±ß½ç²¼¾Ö
+		// è®¾ç½®å¸ƒå±€ç®¡ç†å™¨ä¸ºè¾¹ç•Œå¸ƒå±€
 		this.setLayout(new BorderLayout());
-		// Ìí¼ÓÖ÷Ãæ°å
+		// æ·»åŠ ä¸»é¢æ¿
 		this.add(this.createMainPanel(), BorderLayout.CENTER);
-		// Ìí¼Ó°´Å¥Ãæ°å
+		// æ·»åŠ æŒ‰é’®é¢æ¿
 		this.add(this.createButtonPanel(), BorderLayout.SOUTH);
 		this.setResizable(false);
 		this.setSize(380, 370);
-		// ¾ÓÖĞ¶ÔÆë
+		// å±…ä¸­å¯¹é½
 		FrameUtil.setFrameCenter(this);
 		setVisible(true);
 	}
 
 	/**
-	 * Ìí¼ÓÖ÷Ãæ°å
+	 * æ·»åŠ ä¸»é¢æ¿
 	 */
 	private JTabbedPane createMainPanel() {
 		this.tabs = new JTabbedPane();
 		this.tabs.setOpaque(false);
-		this.tabs.add("ÈËÎïÉèÖÃ", this.createPlayerSelectPanel());
-		this.tabs.setToolTipTextAt(0, "Íê³ÉÈËÎïÉèÖÃ");
-		this.tabs.add("³¡¾°ÉèÖÃ", this.createMapSelectPanel());
-		this.tabs.setToolTipTextAt(1, "¿ÉÒÔÉèÖÃÓÎÏ·³¡¾°");
-		this.tabs.add("ÓÎÏ·ÉèÖÃ", this.createGameSelectPanel());
-		this.tabs.setToolTipTextAt(2, "¿ÉÒÔÉèÖÃÓÎÏ·Ê¤ÀûÌõ¼şµÈ...");
+		this.tabs.add(UI_Language.getLanguage().getFC_EVENT_9(), this.createPlayerSelectPanel());
+		this.tabs.setToolTipTextAt(0, UI_Language.getLanguage().getFC_EVENT_10());
+		this.tabs.add(UI_Language.getLanguage().getFC_EVENT_11(), this.createMapSelectPanel());
+		this.tabs.setToolTipTextAt(1, UI_Language.getLanguage().getFC_EVENT_12());
+		this.tabs.add(UI_Language.getLanguage().getFC_EVENT_13(), this.createGameSelectPanel());
+		this.tabs.setToolTipTextAt(2, UI_Language.getLanguage().getFC_EVENT_14());
 		return tabs;
 	}
 
 	/**
 	 * 
-	 * ÓÎÏ·Ê¤ÀûÌõ¼şÉèÖÃ
+	 * æ¸¸æˆèƒœåˆ©æ¡ä»¶è®¾ç½®
 	 * 
 	 */
 	private Component createGameSelectPanel() {
@@ -146,8 +147,8 @@ public class FrameConfig extends JFrame {
 		// --------------------------------
 		final JPanel dayPanel = new JPanel();
 		dayPanel.setBorder(BorderFactory.createTitledBorder(""));
-		JLabel day = new JLabel("ÓÎÏ·ÌìÊı");
-		final String[] days = { "ÎŞÏŞÖÆ", "20", "40", "80", "120", "240", "480" };
+		JLabel day = new JLabel(UI_Language.getLanguage().getFC_EVENT_15());
+		final String[] days = { UI_Language.getLanguage().getFC_EVENT_16(), "20", "40", "80", "120", "240", "480" };
 		final Choice daysChoice = new Choice();
 
 		for (String a : days) {
@@ -158,7 +159,7 @@ public class FrameConfig extends JFrame {
 			@Override
 			public void itemStateChanged(ItemEvent arg0) {
 				String str = days[daysChoice.getSelectedIndex()];
-				if (str.equals("ÎŞÏŞÖÆ")) {
+				if (str.equals(UI_Language.getLanguage().getFC_EVENT_16())) {
 					GameRunning.GAME_DAY = -1;
 				} else {
 					GameRunning.GAME_DAY = Integer.parseInt(str);
@@ -171,8 +172,8 @@ public class FrameConfig extends JFrame {
 		// --------------------------------
 		JPanel moneyPanel = new JPanel();
 		moneyPanel.setBorder(BorderFactory.createTitledBorder(""));
-		JLabel money = new JLabel("Ê¤Àû½ğÇ®");
-		final String[] money_ = { "ÎŞÏŞÖÆ", "10000", "20000", "40000", "80000",
+		JLabel money = new JLabel(UI_Language.getLanguage().getFC_EVENT_16());
+		final String[] money_ = { UI_Language.getLanguage().getFC_EVENT_16(), "10000", "20000", "40000", "80000",
 				"200000" };
 		final Choice moneyChoice = new Choice();
 		for (String a : money_) {
@@ -183,7 +184,7 @@ public class FrameConfig extends JFrame {
 			@Override
 			public void itemStateChanged(ItemEvent arg0) {
 				String str = money_[moneyChoice.getSelectedIndex()];
-				if (str.equals("ÎŞÏŞÖÆ")) {
+				if (str.equals(UI_Language.getLanguage().getFC_EVENT_16())) {
 					GameRunning.MONEY_MAX = -1;
 				} else {
 					GameRunning.MONEY_MAX = Integer.parseInt(str);
@@ -196,7 +197,7 @@ public class FrameConfig extends JFrame {
 		// --------------------------------
 		JPanel cashPanel = new JPanel();
 		cashPanel.setBorder(BorderFactory.createTitledBorder(""));
-		JLabel cash = new JLabel("Íæ¼Ò³õÊ¼½ğÇ®");
+		JLabel cash = new JLabel(UI_Language.getLanguage().getFC_EVENT_17());
 		final String[] cash_ = { "1000", "2000", "5000", "7000", "10000",
 				"20000" };
 		final Choice cashChoice = new Choice();
@@ -218,7 +219,7 @@ public class FrameConfig extends JFrame {
 		JPanel infoPanel = new JPanel();
 		infoPanel.setBorder(BorderFactory.createTitledBorder(""));
 		JLabel info = new JLabel();
-		info.setText("<html>¿ÉÒÔ¸Ä±äÓÎÏ·µÄÊ¤ÀûÌõ¼ş.<strong>(Ä¬ÈÏÆÆ²úÎªÊ§°Ü)</strong></html>");
+		info.setText("<html>Kann die Bedingungen fÃ¼r den Gewinn des Spiels Ã¤ndern.<strong>(Standardinsolvenz ist Scheitern)</strong></html>");
 		infoPanel.add(info);
 
 		panel.add(dayPanel);
@@ -230,7 +231,7 @@ public class FrameConfig extends JFrame {
 
 	/**
 	 * 
-	 * µØÍ¼Ñ¡ÔñÃæ°å
+	 * åœ°å›¾é€‰æ‹©é¢æ¿
 	 * 
 	 */
 	private JPanel createMapSelectPanel() {
@@ -238,7 +239,7 @@ public class FrameConfig extends JFrame {
 		jp.setLayout(new GridLayout());
 		jp.setBackground(new Color(235,236,237));
 		JPanel lPane = new JPanel(new BorderLayout());
-		String[] maps = { "\"LOVEµØÍ¼\"", "\"¹íÎİµØÍ¼\"", "\"ºÃÔËµØÍ¼\"" };
+		String[] maps = { "\"LOVE MAP\"", "\"GHOST MAP\"", "\"LUCKY MAP\"" };
 		final ImageIcon[] maps1 = {
 				new ImageIcon("images/other/1.png"),
 				new ImageIcon("images/other/2.png"),
@@ -246,20 +247,20 @@ public class FrameConfig extends JFrame {
 		final JList jlst = new JList(maps);
 		jlst.setSelectedIndex(0);
 		final JLabel mapV = new JLabel(maps1[0]);
-		final JButton ok = new JButton("È·¶¨");
+		final JButton ok = new JButton(UI_Language.getLanguage().getFC_EVENT_19());
 		ok.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				GameRunning.MAP = jlst.getSelectedIndex() + 1;
-				ok.setText("ÒÑÑ¡");
+				ok.setText(UI_Language.getLanguage().getFC_EVENT_20());
 			}
 		});
 		jlst.addListSelectionListener(new ListSelectionListener() {
 			@Override
 			public void valueChanged(ListSelectionEvent e) {
 				mapV.setIcon(maps1[jlst.getSelectedIndex()]);
-				ok.setText("È·¶¨");
+				ok.setText(UI_Language.getLanguage().getFC_EVENT_19());
 			}
 		});
 		lPane.add(jlst);
@@ -273,17 +274,17 @@ public class FrameConfig extends JFrame {
 	}
 
 	/**
-	 * ÈËÎïÑ¡ÔñÃæ°å
+	 * äººç‰©é€‰æ‹©é¢æ¿
 	 * */
 	private JPanel createPlayerSelectPanel() {
 		JPanel jp = new JPanel();
 		jp.setLayout(null);
 		jp.setBackground(new Color(235,236,237));
-		// Ôö¼Ó1PÃæ°å
+		// å¢åŠ 1Pé¢æ¿
 		addPlayer01Config(12, 0, jp);
-		// Ôö¼Ó2PÃæ°å
+		// å¢åŠ 2Pé¢æ¿
 		addPlayer02Config(212, 0, jp);
-		// Ôö¼ÓÖØÖÃ°´Å¥
+		// å¢åŠ é‡ç½®æŒ‰é’®
 		addCancelButton(jp);
 		return jp;
 	}
@@ -297,7 +298,7 @@ public class FrameConfig extends JFrame {
 			}
 
 			/**
-			 * ÖØĞÂ¼ÓÔØ ÈËÎïÑ¡ÔñÑ¡Ïî¿¨
+			 * é‡æ–°åŠ è½½ äººç‰©é€‰æ‹©é€‰é¡¹å¡
 			 */
 			private void reLoad() {
 				leftButton01.setEnabled(true);
@@ -329,23 +330,23 @@ public class FrameConfig extends JFrame {
 	}
 
 	/**
-	 * Ôö¼Ó1PÃæ°å
+	 * å¢åŠ 1Pé¢æ¿
 	 */
 	private void addPlayer01Config(int x, int y, JPanel jp) {
-		// ´´½¨ ÈËÎïÍ¼Ïñlabel
+		// åˆ›å»º äººç‰©å›¾åƒlabel
 		jlPlayer01Choose = new JLabel(img[chooses[0]]);
 		jlPlayer01Choose.setBounds(x + 8, y, 128, 128);
-		// ´´½¨ÈËÎïÍ¼ÏñÒÑÑ¡Ôñlabel
+		// åˆ›å»ºäººç‰©å›¾åƒå·²é€‰æ‹©label
 		jlPlayer01Selected.setBounds(x + 8, y, 128, 128);
 		jlPlayer01Selected.setVisible(false);
-		// ´´½¨×ó°´Å¥
+		// åˆ›å»ºå·¦æŒ‰é’®
 		leftButton01 = this.createButton(x, 92 + y, Photo.BUTTON_LEFT, 'a');
-		// Ìí¼Ó¼àÌıÊÂ¼ş
+		// æ·»åŠ ç›‘å¬äº‹ä»¶
 		leftButton01.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// ÉèÖÃÎªÑ­»·
+				// è®¾ç½®ä¸ºå¾ªç¯
 				if (chooses[0] <= 0) {
 					chooses[0] = img.length;
 				}
@@ -354,14 +355,14 @@ public class FrameConfig extends JFrame {
 		});
 
 		jp.add(leftButton01);
-		// ´´½¨ÓÒ°´Å¥
+		// åˆ›å»ºå³æŒ‰é’®
 		rightButton01 = this.createButton(128 + x, 92 + y, Photo.BUTTON_RIGHT,
 				'd');
-		// Ìí¼Ó¼àÌıÊÂ¼ş
+		// æ·»åŠ ç›‘å¬äº‹ä»¶
 		rightButton01.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				// ÉèÖÃÑ­»·
+				// è®¾ç½®å¾ªç¯
 				if (chooses[0] >= img.length - 1) {
 					chooses[0] = -1;
 				}
@@ -369,19 +370,19 @@ public class FrameConfig extends JFrame {
 			}
 		});
 		jp.add(rightButton01);
-		// Ôö¼ÓÈ·¶¨¿ò
+		// å¢åŠ ç¡®å®šæ¡†
 		jbnPlayer01.setBounds(12 + x, 128 + y, 120, 30);
-		// Ôö¼ÓÊÂ¼ş¼àÌı
+		// å¢åŠ äº‹ä»¶ç›‘å¬
 		jbnPlayer01.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				if ((chooses[0] != selected[1])) {
-					// ÉèÖÃ²»ÄÜµã»÷
+					// è®¾ç½®ä¸èƒ½ç‚¹å‡»
 					leftButton01.setEnabled(false);
 					rightButton01.setEnabled(false);
 					jbnPlayer01.setEnabled(false);
-					// Ôö¼ÓÑ¡ÔñÍ¼Æ¬
+					// å¢åŠ é€‰æ‹©å›¾ç‰‡
 					jlPlayer01Selected.setVisible(true);
 					selected[0] = chooses[0];
 				}
@@ -390,11 +391,11 @@ public class FrameConfig extends JFrame {
 		jp.add(jbnPlayer01);
 		jp.add(jlPlayer01Selected);
 		jp.add(jlPlayer01Choose);
-		// Ôö¼ÓÃû×Ö¿ò
+		// å¢åŠ åå­—æ¡†
 		jbnPlayerNameLabel01.setBounds(x + 12, y + 128 + 36, 50, 30);
 		jbnPlayerNameField01.setBounds(x + 12 + 30, y + 128 + 36, 120 - 30, 30);
 		jbnPlayerName01.setBounds(x + 12, y + 128 + 36 + 36, 120, 30);
-		// °´Å¥Ìí¼Ó¼àÌı
+		// æŒ‰é’®æ·»åŠ ç›‘å¬
 		jbnPlayerName01.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -413,22 +414,22 @@ public class FrameConfig extends JFrame {
 	}
 
 	/**
-	 * Ôö¼Ó2PÃæ°å
+	 * å¢åŠ 2Pé¢æ¿
 	 */
 	private void addPlayer02Config(int x, int y, JPanel jp) {
-		// ´´½¨ ÈËÎïÍ¼Ïñlabel
+		// åˆ›å»º äººç‰©å›¾åƒlabel
 		jlPlayer02Choose = new JLabel(img[chooses[1]]);
 		jlPlayer02Choose.setBounds(x + 8, y, 128, 128);
-		// ´´½¨ÈËÎïÍ¼ÏñÒÑÑ¡Ôñlabel
+		// åˆ›å»ºäººç‰©å›¾åƒå·²é€‰æ‹©label
 		jlPlayer02Selected.setBounds(x + 8, y, 128, 128);
 		jlPlayer02Selected.setVisible(false);
-		// ´´½¨×ó°´Å¥
+		// åˆ›å»ºå·¦æŒ‰é’®
 		leftButton02 = this.createButton(x, 92 + y, Photo.BUTTON_LEFT, 'a');
-		// Ìí¼Ó¼àÌıÊÂ¼ş
+		// æ·»åŠ ç›‘å¬äº‹ä»¶
 		leftButton02.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// ÉèÖÃÎªÑ­»·
+				// è®¾ç½®ä¸ºå¾ªç¯
 				if (chooses[1] <= 0) {
 					chooses[1] = img.length;
 				}
@@ -437,14 +438,14 @@ public class FrameConfig extends JFrame {
 		});
 
 		jp.add(leftButton02);
-		// ´´½¨ÓÒ°´Å¥
+		// åˆ›å»ºå³æŒ‰é’®
 		rightButton02 = this.createButton(128 + x, 92 + y, Photo.BUTTON_RIGHT,
 				'd');
-		// Ìí¼Ó¼àÌıÊÂ¼ş
+		// æ·»åŠ ç›‘å¬äº‹ä»¶
 		rightButton02.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				// ÉèÖÃÑ­»·
+				// è®¾ç½®å¾ªç¯
 				if (chooses[1] >= img.length - 1) {
 					chooses[1] = -1;
 				}
@@ -453,19 +454,19 @@ public class FrameConfig extends JFrame {
 		});
 
 		jp.add(rightButton02);
-		// Ôö¼ÓÈ·¶¨¿ò
+		// å¢åŠ ç¡®å®šæ¡†
 		jbnPlayer02.setBounds(12 + x, 128 + y, 120, 30);
-		// Ôö¼ÓÊÂ¼ş¼àÌı
+		// å¢åŠ äº‹ä»¶ç›‘å¬
 		jbnPlayer02.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				if (selected[0] != chooses[1]) {
-					// ÉèÖÃ²»ÄÜµã»÷
+					// è®¾ç½®ä¸èƒ½ç‚¹å‡»
 					leftButton02.setEnabled(false);
 					rightButton02.setEnabled(false);
 					jbnPlayer02.setEnabled(false);
-					// Ôö¼ÓÑ¡ÔñÍ¼Æ¬
+					// å¢åŠ é€‰æ‹©å›¾ç‰‡
 					jlPlayer02Selected.setVisible(true);
 					selected[1] = chooses[1];
 				}
@@ -474,11 +475,11 @@ public class FrameConfig extends JFrame {
 		jp.add(jbnPlayer02);
 		jp.add(jlPlayer02Selected);
 		jp.add(jlPlayer02Choose);
-		// Ôö¼ÓÃû×Ö¿ò
+		// å¢åŠ åå­—æ¡†
 		jbnPlayerNameLabel02.setBounds(x + 12, y + 128 + 36, 50, 30);
 		jbnPlayerNameField02.setBounds(x + 12 + 30, y + 128 + 36, 120 - 30, 30);
 		jbnPlayerName02.setBounds(x + 12, y + 128 + 36 + 36, 120, 30);
-		// °´Å¥Ìí¼Ó¼àÌı
+		// æŒ‰é’®æ·»åŠ ç›‘å¬
 		jbnPlayerName02.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -498,7 +499,7 @@ public class FrameConfig extends JFrame {
 
 	/**
 	 * 
-	 * Í¼±ê°´Å¥
+	 * å›¾æ ‡æŒ‰é’®
 	 * 
 	 * */
 	public JButton createButton(int x, int y, ImageIcon[] img, char keyLinstenr) {
@@ -511,55 +512,55 @@ public class FrameConfig extends JFrame {
 	}
 
 	/**
-	 * Ìí¼Ó°´Å¥Ãæ°å
+	 * æ·»åŠ æŒ‰é’®é¢æ¿
 	 */
 	private JPanel createButtonPanel() {
 		JPanel jp = new JPanel(new FlowLayout(FlowLayout.RIGHT));
 		
-		// ¿ªÊ¼°´Å¥Ìí¼Ó¼àÌıÆ÷
+		// å¼€å§‹æŒ‰é’®æ·»åŠ ç›‘å¬å™¨
 		jbnStart.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if (selected[0] < 0 || selected[1] < 0) {
-					JOptionPane.showMessageDialog(null, "ÇëÍê³ÉÈËÎïÉèÖÃ!");
+					JOptionPane.showMessageDialog(null, UI_Language.getLanguage().getFC_EVENT_21());
 				} else if (selectedName[0].equals("")
 						|| selectedName[1].equals("")) {
-					JOptionPane.showMessageDialog(null, "ÇëÍê³ÉÃû×ÖÉèÖÃ!");
+					JOptionPane.showMessageDialog(null, UI_Language.getLanguage().getFC_EVENT_22());
 				} else {
-					int choose = JOptionPane.showConfirmDialog(null, "ÊÇ·ñ¿ªÊ¼£¿");
+					int choose = JOptionPane.showConfirmDialog(null, UI_Language.getLanguage().getFC_EVENT_23());
 					if (choose == JOptionPane.OK_OPTION) {
-						// ¿ªÊ¼ÓÎÏ·
+						// å¼€å§‹æ¸¸æˆ
 						startGame();
 					}
 				}
 			}
 
 			/**
-			 * ¿ªÊ¼ÓÎÏ·
+			 * å¼€å§‹æ¸¸æˆ
 			 * */
 			private void startGame() {
 				setVisible(false);
 				jFrameGame.setVisible(true);
 				Control control = jFrameGame.getPanelGame().getControl();
-				// ´¦ÀíÍæ¼ÒÊı¾İÅäÖÃ
+				// å¤„ç†ç©å®¶æ•°æ®é…ç½®
 				dealPlayers(control);
-				// ¿ØÖÆÆ÷Æô¶¯
+				// æ§åˆ¶å™¨å¯åŠ¨
 				control.start();
 			}
 
 			/**
-			 * ´¦ÀíÍæ¼ÒÊı¾İÅäÖÃ
+			 * å¤„ç†ç©å®¶æ•°æ®é…ç½®
 			 */
 			private void dealPlayers(Control control) {
 				List<PlayerModel> tempPlayer = control.getPlayers();
-				// ´«ÈëÃû×Ö
+				// ä¼ å…¥åå­—
 				tempPlayer.get(0).setName(selectedName[0]);
 				tempPlayer.get(1).setName(selectedName[1]);
-				// ´«ÈëÊ¹ÓÃ½ÇÉ«±àºÅ
+				// ä¼ å…¥ä½¿ç”¨è§’è‰²ç¼–å·
 				tempPlayer.get(0).setPart(selected[0]);
 				tempPlayer.get(1).setPart(selected[1]);
-				// ´«Èë ½ÇÉ«¶ÔÁ¢½ÇÉ«
+				// ä¼ å…¥ è§’è‰²å¯¹ç«‹è§’è‰²
 				tempPlayer.get(0).setOtherPlayer(tempPlayer.get(1));
 				tempPlayer.get(1).setOtherPlayer(tempPlayer.get(0));
 			}

@@ -263,7 +263,7 @@ public class PlayerModel extends Tick implements Port {
 	}
 
 	public void debug() {
-		System.out.println("Íæ¼Ò:" + name + ",×ø±ê£º[" + x + "," + y + "].");
+		System.out.println("Player:" + name + ",Place£º[" + x + "," + y + "].");
 	}
 
 	/**

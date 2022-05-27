@@ -907,4 +907,268 @@ public String getPP_EVENT_4() {
 		return "";
 	}
 }
+public String getFC_EVENT_1() {
+	switch (international_code) {
+	case 0:
+		return German.FC_EVENT_1;
+	case 1:
+		return Chinese.FC_EVENT_1;
+
+	default:
+		return "";
+	}
+}
+public String getFC_EVENT_2() {
+	switch (international_code) {
+	case 0:
+		return German.FC_EVENT_2;
+	case 1:
+		return Chinese.FC_EVENT_2;
+
+	default:
+		return "";
+	}
+}
+public String getFC_EVENT_3() {
+	switch (international_code) {
+	case 0:
+		return German.FC_EVENT_3;
+	case 1:
+		return Chinese.FC_EVENT_3;
+
+	default:
+		return "";
+	}
+}
+public String getFC_EVENT_4() {
+	switch (international_code) {
+	case 0:
+		return German.FC_EVENT_4;
+	case 1:
+		return Chinese.FC_EVENT_4;
+
+	default:
+		return "";
+	}
+}
+public String getFC_EVENT_5() {
+	switch (international_code) {
+	case 0:
+		return German.FC_EVENT_5;
+	case 1:
+		return Chinese.FC_EVENT_5;
+
+	default:
+		return "";
+	}
+}
+public String getFC_EVENT_6() {
+	switch (international_code) {
+	case 0:
+		return German.FC_EVENT_6;
+	case 1:
+		return Chinese.FC_EVENT_6;
+
+	default:
+		return "";
+	}
+}
+public String getFC_EVENT_7() {
+	switch (international_code) {
+	case 0:
+		return German.FC_EVENT_7;
+	case 1:
+		return Chinese.FC_EVENT_7;
+
+	default:
+		return "";
+	}
+}
+public String getFC_EVENT_8() {
+	switch (international_code) {
+	case 0:
+		return German.FC_EVENT_8;
+	case 1:
+		return Chinese.FC_EVENT_8;
+
+	default:
+		return "";
+	}
+}
+public String getFC_EVENT_9() {
+	switch (international_code) {
+	case 0:
+		return German.FC_EVENT_9;
+	case 1:
+		return Chinese.FC_EVENT_9;
+
+	default:
+		return "";
+	}
+}
+public String getFC_EVENT_10() {
+	switch (international_code) {
+	case 0:
+		return German.FC_EVENT_10;
+	case 1:
+		return Chinese.FC_EVENT_10;
+
+	default:
+		return "";
+	}
+}
+public String getFC_EVENT_11() {
+	switch (international_code) {
+	case 0:
+		return German.FC_EVENT_11;
+	case 1:
+		return Chinese.FC_EVENT_11;
+
+	default:
+		return "";
+	}
+}
+public String getFC_EVENT_12() {
+	switch (international_code) {
+	case 0:
+		return German.FC_EVENT_12;
+	case 1:
+		return Chinese.FC_EVENT_12;
+
+	default:
+		return "";
+	}
+}
+public String getFC_EVENT_13() {
+	switch (international_code) {
+	case 0:
+		return German.FC_EVENT_13;
+	case 1:
+		return Chinese.FC_EVENT_13;
+
+	default:
+		return "";
+	}
+}
+public String getFC_EVENT_14() {
+	switch (international_code) {
+	case 0:
+		return German.FC_EVENT_14;
+	case 1:
+		return Chinese.FC_EVENT_14;
+
+	default:
+		return "";
+	}
+}
+public String getFC_EVENT_15() {
+	switch (international_code) {
+	case 0:
+		return German.FC_EVENT_15;
+	case 1:
+		return Chinese.FC_EVENT_15;
+
+	default:
+		return "";
+	}
+}
+public String getFC_EVENT_16() {
+	switch (international_code) {
+	case 0:
+		return German.FC_EVENT_16;
+	case 1:
+		return Chinese.FC_EVENT_16;
+
+	default:
+		return "";
+	}
+}
+public String getFC_EVENT_17() {
+	switch (international_code) {
+	case 0:
+		return German.FC_EVENT_17;
+	case 1:
+		return Chinese.FC_EVENT_17;
+
+	default:
+		return "";
+	}
+}
+public String getFC_EVENT_18() {
+	switch (international_code) {
+	case 0:
+		return German.FC_EVENT_18;
+	case 1:
+		return Chinese.FC_EVENT_18;
+
+	default:
+		return "";
+	}
+}
+public String getFC_EVENT_19() {
+	switch (international_code) {
+	case 0:
+		return German.FC_EVENT_19;
+	case 1:
+		return Chinese.FC_EVENT_19;
+
+	default:
+		return "";
+	}
+}
+public String getFC_EVENT_20() {
+	switch (international_code) {
+	case 0:
+		return German.FC_EVENT_20;
+	case 1:
+		return Chinese.FC_EVENT_20;
+
+	default:
+		return "";
+	}
+}
+public String getFC_EVENT_21() {
+	switch (international_code) {
+	case 0:
+		return German.FC_EVENT_21;
+	case 1:
+		return Chinese.FC_EVENT_21;
+
+	default:
+		return "";
+	}
+}
+public String getFC_EVENT_22() {
+	switch (international_code) {
+	case 0:
+		return German.FC_EVENT_22;
+	case 1:
+		return Chinese.FC_EVENT_22;
+
+	default:
+		return "";
+	}
+}
+public String getFC_EVENT_23() {
+	switch (international_code) {
+	case 0:
+		return German.FC_EVENT_23;
+	case 1:
+		return Chinese.FC_EVENT_23;
+
+	default:
+		return "";
+	}
+}
+public String getTTM_EVENT_1() {
+	switch (international_code) {
+	case 0:
+		return German.TTM_EVENT_1;
+	case 1:
+		return Chinese.TTM_EVENT_1;
+
+	default:
+		return "";
+	}
+}
 }

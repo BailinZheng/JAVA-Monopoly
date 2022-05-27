@@ -75,13 +75,36 @@ public final class German extends AlleSprachen {
 	public static String JPG_EVENT_2 = "Erstellen Sie einen Dialog ";
 	public static String JPG_EVENT_3 = "OK-Box ";
 	public static String JPG_EVENT_4 = "Kontrollbox ";
-	public static String PI_EVENT_1 = "Spieltage erreicht";
-	public static String PI_EVENT_2 = "Tag";
-	public static String PI_EVENT_3 = "Endgrund";
-	public static String PP_EVENT_1 = "Gold";
-	public static String PP_EVENT_2 = "Punktrolle";
-	public static String PP_EVENT_3 = "Hause";
-	public static String PP_EVENT_4 = "card";
-	
+	public static String PI_EVENT_1 = "Spieltage erreicht ";
+	public static String PI_EVENT_2 = "Tag ";
+	public static String PI_EVENT_3 = "Endgrund ";
+	public static String PP_EVENT_1 = "Gold ";
+	public static String PP_EVENT_2 = "Punktrolle ";
+	public static String PP_EVENT_3 = "Hause ";
+	public static String PP_EVENT_4 = "Card ";
+	public static String FC_EVENT_1 = "Play ";
+	public static String FC_EVENT_2 = "Einstellungen zurücksetzen ";
+	public static String FC_EVENT_3 = "1P Rolle bestätigen";
+	public static String FC_EVENT_4 = "Name";
+	public static String FC_EVENT_5 = "1P Name bestätigen";
+	public static String FC_EVENT_6 = "2P Rolle bestätigen";
+	public static String FC_EVENT_7 = "2P Name bestätigen";
+	public static String FC_EVENT_8 = "Benutzerdateneinstellungen";
+	public static String FC_EVENT_9 =  "Komplettes Charakter-Setup";
+	public static String FC_EVENT_10 =  "Komplettes Charakter-Setup";
+	public static String FC_EVENT_11 = "Szeneneinstellungen";
+	public static String FC_EVENT_12 = "Kann Spielszenen entwerfen";
+	public static String FC_EVENT_13 = "Spieleinstellungen";
+	public static String FC_EVENT_14 = "Spielsiegbedingungen können gestaltet werden";
+	public static String FC_EVENT_15 = "Spieltage";
+	public static String FC_EVENT_16 =  "unbegrenzt";
+	public static String FC_EVENT_17 = "Anfangsgeld des Spielers";
+	public static String FC_EVENT_18 = "Betrag, um den Sieg zu erringen";
+	public static String FC_EVENT_19 = "bestätigen ";
+	public static String FC_EVENT_20 =  "ausgewählt";
+	public static String FC_EVENT_21 =  "Bitte vervollständigen Sie die Charaktereinstellung!";
+	public static String FC_EVENT_22 =  "Bitte vervollständigen Sie die Namenseinstellung!";
+	public static String FC_EVENT_23 = "Möchten Sie starten?";
+	public static String TTM_EVENT_1 = "Spiele beginnen! Wer ist der letzte Millionär?";
 	}
 

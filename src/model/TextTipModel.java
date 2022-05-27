@@ -6,6 +6,7 @@ import java.awt.Graphics;
 import ui.JPanelGame;
 import ui.TextTip;
 import control.Control;
+import language.UI_Language;
 
 /**
  * 
@@ -18,7 +19,7 @@ public class TextTipModel extends Tick implements Port{
 	
 	private PlayerModel player = null;
 	
-	private String tipString = "游戏开始！谁才是最后的大富翁呢？";
+	private String tipString = UI_Language.getLanguage().getTTM_EVENT_1();
 	
 	public TextTipModel (){
 	}

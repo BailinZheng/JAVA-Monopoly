@@ -572,7 +572,7 @@ public class Control {
 		int random = (int) (Math.random() * ((Prison) b).getEvents().length);
 		String text = ((Prison) b).getEvents()[random];
 		this.textTip.showTextTip(player, player.getName() + text + UI_Language.getLanguage().getCON_EVENT_7()
-				+ (days - 1) + "天.", 3);
+				+ (days - 1) + UI_Language.getLanguage().getCON_EVENT_25(), 3);
 		new Thread(new MyThread(run, 1)).start();
 	}
 

@@ -81,6 +81,29 @@ public final class Chinese extends AlleSprachen {
 	public static String PP_EVENT_2 = "点券";
 	public static String PP_EVENT_3 = "房屋";
 	public static String PP_EVENT_4 = "卡牌";
-	
+	public static String FC_EVENT_1 = "开始游戏";
+	public static String FC_EVENT_2 = "重置设定";
+	public static String FC_EVENT_3 = "1P确认角色";
+	public static String FC_EVENT_4 = "名字";
+	public static String FC_EVENT_5 = "1P确认名字";
+	public static String FC_EVENT_6 = "2P确认角色";
+	public static String FC_EVENT_7 = "2P确认名字";
+	public static String FC_EVENT_8 = "用户数据设定";
+	public static String FC_EVENT_9 = "人物设置";
+	public static String FC_EVENT_10 = "完成人物设置";
+	public static String FC_EVENT_11 = "场景设置";
+	public static String FC_EVENT_12= "可以设计游戏场景";
+	public static String FC_EVENT_13 = "游戏设置";
+	public static String FC_EVENT_14 = "可以设置游戏胜利条件";
+	public static String FC_EVENT_15 = "游戏天数";
+	public static String FC_EVENT_16 = "无限制";
+	public static String FC_EVENT_17 = "玩家初始金钱";
+	public static String FC_EVENT_18 = "胜利金钱";
+	public static String FC_EVENT_19 = "确定";
+	public static String FC_EVENT_20 = "已选";
+	public static String FC_EVENT_21 = "请完成人物设置！";
+	public static String FC_EVENT_22 = "请完成名字设置！";
+	public static String FC_EVENT_23 = "是否开始?";
+	public static String TTM_EVENT_1 = "游戏开始！谁才是最后的大富翁呢？";
 	}
 
