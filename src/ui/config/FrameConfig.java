@@ -114,7 +114,7 @@ public class FrameConfig extends JFrame {
 		// 添加按钮面板
 		this.add(this.createButtonPanel(), BorderLayout.SOUTH);
 		this.setResizable(false);
-		this.setSize(380, 370);
+		this.setSize(420, 470);
 		// 居中对齐
 		FrameUtil.setFrameCenter(this);
 		setVisible(true);
@@ -172,7 +172,7 @@ public class FrameConfig extends JFrame {
 		// --------------------------------
 		JPanel moneyPanel = new JPanel();
 		moneyPanel.setBorder(BorderFactory.createTitledBorder(""));
-		JLabel money = new JLabel(UI_Language.getLanguage().getFC_EVENT_16());
+		JLabel money = new JLabel(UI_Language.getLanguage().getFC_EVENT_18());
 		final String[] money_ = { UI_Language.getLanguage().getFC_EVENT_16(), "10000", "20000", "40000", "80000",
 				"200000" };
 		final Choice moneyChoice = new Choice();
@@ -219,7 +219,7 @@ public class FrameConfig extends JFrame {
 		JPanel infoPanel = new JPanel();
 		infoPanel.setBorder(BorderFactory.createTitledBorder(""));
 		JLabel info = new JLabel();
-		info.setText("<html>Kann die Bedingungen für den Gewinn des Spiels ändern.<strong>(Standardinsolvenz ist Scheitern)</strong></html>");
+		info.setText("<html><strong>Standardinsolvenz ist Scheitern</strong></html>");
 		infoPanel.add(info);
 
 		panel.add(dayPanel);
@@ -371,7 +371,7 @@ public class FrameConfig extends JFrame {
 		});
 		jp.add(rightButton01);
 		// 增加确定框
-		jbnPlayer01.setBounds(12 + x, 128 + y, 120, 30);
+		jbnPlayer01.setBounds(12 + x, 128 + y, 188, 20);
 		// 增加事件监听
 		jbnPlayer01.addActionListener(new ActionListener() {
 
@@ -392,9 +392,9 @@ public class FrameConfig extends JFrame {
 		jp.add(jlPlayer01Selected);
 		jp.add(jlPlayer01Choose);
 		// 增加名字框
-		jbnPlayerNameLabel01.setBounds(x + 12, y + 128 + 36, 50, 30);
-		jbnPlayerNameField01.setBounds(x + 12 + 30, y + 128 + 36, 120 - 30, 30);
-		jbnPlayerName01.setBounds(x + 12, y + 128 + 36 + 36, 120, 30);
+		jbnPlayerNameLabel01.setBounds(x + 12, y + 128 + 36, 50, 20);
+		jbnPlayerNameField01.setBounds(x + 12 + 30, y + 128 + 36, 188 - 30, 20);
+		jbnPlayerName01.setBounds(x + 12, y + 128 + 36 + 36, 188, 20);
 		// 按钮添加监听
 		jbnPlayerName01.addActionListener(new ActionListener() {
 			@Override
@@ -455,7 +455,7 @@ public class FrameConfig extends JFrame {
 
 		jp.add(rightButton02);
 		// 增加确定框
-		jbnPlayer02.setBounds(12 + x, 128 + y, 120, 30);
+		jbnPlayer02.setBounds(1 + x, 128 + y, 188, 20);
 		// 增加事件监听
 		jbnPlayer02.addActionListener(new ActionListener() {
 
@@ -476,9 +476,9 @@ public class FrameConfig extends JFrame {
 		jp.add(jlPlayer02Selected);
 		jp.add(jlPlayer02Choose);
 		// 增加名字框
-		jbnPlayerNameLabel02.setBounds(x + 12, y + 128 + 36, 50, 30);
-		jbnPlayerNameField02.setBounds(x + 12 + 30, y + 128 + 36, 120 - 30, 30);
-		jbnPlayerName02.setBounds(x + 12, y + 128 + 36 + 36, 120, 30);
+		jbnPlayerNameLabel02.setBounds(x + 12, y + 128 + 36, 50, 20);
+		jbnPlayerNameField02.setBounds(x + 12 + 30, y + 128 + 36, 188 - 30, 20);
+		jbnPlayerName02.setBounds(x + 12, y + 128 + 36 + 36, 188, 20);
 		// 按钮添加监听
 		jbnPlayerName02.addActionListener(new ActionListener() {
 			@Override

@@ -83,11 +83,11 @@ public final class German extends AlleSprachen {
 	public static String PP_EVENT_3 = "Hause ";
 	public static String PP_EVENT_4 = "Card ";
 	public static String FC_EVENT_1 = "Play ";
-	public static String FC_EVENT_2 = "Einstellungen zurücksetzen ";
-	public static String FC_EVENT_3 = "1P Rolle bestätigen";
+	public static String FC_EVENT_2 = "reset ";
+	public static String FC_EVENT_3 = "1P Charakter bestätigen";
 	public static String FC_EVENT_4 = "Name";
 	public static String FC_EVENT_5 = "1P Name bestätigen";
-	public static String FC_EVENT_6 = "2P Rolle bestätigen";
+	public static String FC_EVENT_6 = "2P Charakter bestätigen";
 	public static String FC_EVENT_7 = "2P Name bestätigen";
 	public static String FC_EVENT_8 = "Benutzerdateneinstellungen";
 	public static String FC_EVENT_9 =  "Komplettes Charakter-Setup";
@@ -99,7 +99,7 @@ public final class German extends AlleSprachen {
 	public static String FC_EVENT_15 = "Spieltage";
 	public static String FC_EVENT_16 =  "unbegrenzt";
 	public static String FC_EVENT_17 = "Anfangsgeld des Spielers";
-	public static String FC_EVENT_18 = "Betrag, um den Sieg zu erringen";
+	public static String FC_EVENT_18 = "Gold zu gewinnen";
 	public static String FC_EVENT_19 = "bestätigen ";
 	public static String FC_EVENT_20 =  "ausgewählt";
 	public static String FC_EVENT_21 =  "Bitte vervollständigen Sie die Charaktereinstellung!";
